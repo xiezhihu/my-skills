@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "skill_id": "2fd6e157-9b25-411f-9487-14de2bdf86f2",
+  "path": "using-git-worktrees",
+  "path_key": "using-git-worktrees",
+  "enabled": true,
+  "tags": [
+    "Git",
+    "Superpowers"
+  ],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

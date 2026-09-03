@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "scenario_id": "19354fc3-f82f-4c10-ba03-6769404aaef6",
+  "name": "安全逆向",
+  "description": "逆向工程与安全任务路由",
+  "icon": null,
+  "sort_order": 999
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "skill_id": "9017f2bc-4ccf-4fd9-ad3f-7e23cdfe2e6a",
+  "path": "ui-ux-pro-max",
+  "path_key": "ui-ux-pro-max",
+  "enabled": true,
+  "tags": [
+    "UI设计"
+  ],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

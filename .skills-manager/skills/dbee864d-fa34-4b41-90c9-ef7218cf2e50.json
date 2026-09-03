@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "skill_id": "dbee864d-fa34-4b41-90c9-ef7218cf2e50",
+  "path": "subagent-driven-development",
+  "path_key": "subagent-driven-development",
+  "enabled": true,
+  "tags": [
+    "Superpowers"
+  ],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

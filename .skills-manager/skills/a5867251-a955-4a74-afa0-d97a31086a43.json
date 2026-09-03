@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "skill_id": "a5867251-a955-4a74-afa0-d97a31086a43",
+  "path": "xzh-editable-ppt-studio",
+  "path_key": "xzh-editable-ppt-studio",
+  "enabled": true,
+  "tags": [
+    "PPT制作",
+    "可编辑PPT"
+  ],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

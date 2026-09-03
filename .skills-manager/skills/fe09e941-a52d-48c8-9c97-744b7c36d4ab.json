@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "skill_id": "fe09e941-a52d-48c8-9c97-744b7c36d4ab",
+  "path": "systematic-debugging",
+  "path_key": "systematic-debugging",
+  "enabled": true,
+  "tags": [
+    "Superpowers"
+  ],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

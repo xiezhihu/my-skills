@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "scenario_id": "e15a7c44-4afd-4738-aec0-aa330fb3a319",
+  "name": "生图",
+  "description": "AI 图像生成、编辑与素材制作",
+  "icon": null,
+  "sort_order": 999
+}

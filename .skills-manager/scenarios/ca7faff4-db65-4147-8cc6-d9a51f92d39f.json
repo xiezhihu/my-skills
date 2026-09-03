@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "scenario_id": "ca7faff4-db65-4147-8cc6-d9a51f92d39f",
+  "name": "演示文稿",
+  "description": "PPT/PPTX 创建、编辑与还原",
+  "icon": null,
+  "sort_order": 999
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "skill_id": "3c2935d7-6282-4527-b812-fc5f7b50ed5a",
+  "path": "receiving-code-review",
+  "path_key": "receiving-code-review",
+  "enabled": true,
+  "tags": [
+    "Superpowers"
+  ],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

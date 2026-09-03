@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "5b3891e1-171f-45a4-ae0f-e4a3b0e2be1c",
+  "path": "reverse-skill-router",
+  "path_key": "reverse-skill-router",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

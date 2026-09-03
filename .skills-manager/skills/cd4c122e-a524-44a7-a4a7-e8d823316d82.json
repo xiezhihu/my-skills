@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "skill_id": "cd4c122e-a524-44a7-a4a7-e8d823316d82",
+  "path": "pptx",
+  "path_key": "pptx",
+  "enabled": true,
+  "tags": [
+    "PPT编辑"
+  ],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

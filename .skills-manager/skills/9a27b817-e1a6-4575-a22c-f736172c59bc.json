@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "skill_id": "9a27b817-e1a6-4575-a22c-f736172c59bc",
+  "path": "imagegen-router",
+  "path_key": "imagegen-router",
+  "enabled": true,
+  "tags": [
+    "PPT素材",
+    "生图"
+  ],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "skill_id": "dfb8e8be-881b-41e2-8efc-807540b6953f",
+  "path": "GordenImage2PPTX",
+  "path_key": "gordenimage2pptx",
+  "enabled": true,
+  "tags": [
+    "PPT还原"
+  ],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}
