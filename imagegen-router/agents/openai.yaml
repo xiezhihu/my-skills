@@ -1,4 +1,0 @@
-interface:
-  display_name: "生图路由器"
-  short_description: "通过本地路由器管理多个 OpenAI 兼容生图供应商"
-  default_prompt: "使用 imagegen-router 生成或编辑图片"
