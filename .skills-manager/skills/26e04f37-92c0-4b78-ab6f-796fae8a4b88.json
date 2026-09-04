@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "26e04f37-92c0-4b78-ab6f-796fae8a4b88",
+  "path": "codex-image2",
+  "path_key": "codex-image2",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "git",
+    "ref": "https://github.com/fengfengzhidao/codex-image2-skill/tree/main/codex-image2",
+    "subpath": "codex-image2",
+    "branch": "main"
+  }
+}
