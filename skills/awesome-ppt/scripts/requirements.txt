@@ -1,2 +1,0 @@
-# V1 scripts use only the Python standard library.
-# This file is kept so future optional dependencies have a stable place.
