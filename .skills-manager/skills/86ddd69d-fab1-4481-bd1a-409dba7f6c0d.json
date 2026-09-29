@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "86ddd69d-fab1-4481-bd1a-409dba7f6c0d",
+  "path": "GordenSuperPPTSkill",
+  "path_key": "gordensuperpptskill",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "git",
+    "ref": "https://github.com/GordenSun/GordenSuperPPTSkills",
+    "subpath": "GordenSuperPPTSkill",
+    "branch": null
+  }
+}

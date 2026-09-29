@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "c217a5b9-0c99-4ffa-8063-53d23a8e71ec",
+  "path": "GordenImagePPTGen",
+  "path_key": "gordenimagepptgen",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "git",
+    "ref": "https://github.com/GordenSun/GordenSuperPPTSkills",
+    "subpath": "GordenImagePPTGen",
+    "branch": null
+  }
+}
