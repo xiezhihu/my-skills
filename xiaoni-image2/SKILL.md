@@ -1,13 +1,13 @@
 ---
 name: xiaoni-image2
-description: 通过小妮兼容 OpenAI 的图片接口生成图片，支持 gpt-image-2/image2 风格的提示词设计、生成、检查和迭代。当用户要求经由 Xiaoni、小妮、中转站、image2、gpt-image-2 或 media.xiaoni-apikey.top 生成、保存、迭代、改善或测试图片时使用。支持使用 PowerShell 将 b64_json 响应保存为 PNG、JPEG 或 WebP 文件。
+description: 通过小妮兼容 OpenAI 的图片接口生成图片，支持 gpt-image-2/image2 风格的提示词设计、生成、检查和迭代。当用户要求经由 Xiaoni、小妮、中转站、image2、gpt-image-2 或 xiaoni-model.top 生成、保存、迭代、改善或测试图片时使用。支持使用 PowerShell 将 b64_json 响应保存为 PNG、JPEG 或 WebP 文件。
 ---
 
 # 小妮 Image2
 
 ## 概述
 
-使用此技能经由小妮中转站生成图片，而非 Codex 内置图片工具。接口根地址为 `https://media.xiaoni-apikey.top/v1`，图片生成端点为 `/images/generations`，响应中应包含 `data[0].b64_json`；随附脚本会将图片写入本地文件。
+使用此技能经由小妮中转站生成图片，而非 Codex 内置图片工具。接口根地址为 `https://xiaoni-model.top/v1`，图片生成端点为 `/images/generations`，响应中应包含 `data[0].b64_json`；随附脚本会将图片写入本地文件。
 
 不得将 API 密钥写入技能文件、命令历史示例或最终回复。仅从 `~/.codex/auth.json` 读取密钥：优先读取 `OPENAI_API_KEY`，未设置时读取 `api_key`。如果用户曾在对话中粘贴密钥，提醒其尽快轮换该密钥。
 
@@ -25,7 +25,7 @@ description: 通过小妮兼容 OpenAI 的图片接口生成图片，支持 gpt-
 
 默认设置：
 
-- 接口根地址：`https://media.xiaoni-apikey.top/v1`
+- 接口根地址：`https://xiaoni-model.top/v1`
 - 端点：`/images/generations`
 - 模型：`gpt-image-2`
 - 尺寸：`1024x1024`

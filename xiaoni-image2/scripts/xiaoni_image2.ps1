@@ -7,7 +7,7 @@ param(
     [string]$Size = "1024x1024",
     [ValidateSet("low", "medium", "high", "auto")]
     [string]$Quality = "medium",
-    [string]$BaseUrl = "https://media.xiaoni-apikey.top/v1",
+    [string]$BaseUrl = "https://xiaoni-model.top/v1",
     [int]$N = 1,
     [switch]$DryRun,
     [switch]$Force
