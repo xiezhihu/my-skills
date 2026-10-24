@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "skill_id": "75834275-17fc-465e-94aa-7526a63e47db",
-  "path": "xiaoni-imagegen",
-  "path_key": "xiaoni-imagegen",
+  "skill_id": "c848a2cc-37e9-40fa-825a-4d338a6801bd",
+  "path": "xiaoni-image2",
+  "path_key": "xiaoni-image2",
   "enabled": true,
   "tags": [],
   "source": {

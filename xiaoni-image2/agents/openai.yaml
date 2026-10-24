@@ -1,0 +1,4 @@
+interface:
+  display_name: "小妮 Image2"
+  short_description: "设计提示词、迭代草稿，并通过小妮 image2 生成图片"
+  default_prompt: "使用 $xiaoni-image2 将这个想法整理为高质量图片提示词，经由小妮 image2 生成图片，并将结果保存为 PNG。"
