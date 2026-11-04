@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "d6e1fcc8-77e7-4e50-ad73-80b34e269d35",
+  "path": "dark-developer-ui",
+  "path_key": "dark-developer-ui",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "git",
+    "ref": "https://github.com/umutc6230/ui-design-skills-pack/tree/main/skills/02-dark-developer-ui",
+    "subpath": "skills/02-dark-developer-ui",
+    "branch": "main"
+  }
+}

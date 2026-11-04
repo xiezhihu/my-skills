@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "944046a5-9b7d-4489-ba23-e1dd679e798d",
+  "path": "split-panel-workspace",
+  "path_key": "split-panel-workspace",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "git",
+    "ref": "https://github.com/umutc6230/ui-design-skills-pack/tree/main/skills/08-split-panel-workspace",
+    "subpath": "skills/08-split-panel-workspace",
+    "branch": "main"
+  }
+}

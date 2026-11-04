@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "a4589ae5-9bd9-4955-bee4-b4933748e9fa",
+  "path": "minimal-sidebar-ui",
+  "path_key": "minimal-sidebar-ui",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "git",
+    "ref": "https://github.com/umutc6230/ui-design-skills-pack/tree/main/skills/03-minimal-sidebar-ui",
+    "subpath": "skills/03-minimal-sidebar-ui",
+    "branch": "main"
+  }
+}

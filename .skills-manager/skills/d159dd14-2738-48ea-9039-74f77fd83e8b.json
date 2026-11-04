@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "d159dd14-2738-48ea-9039-74f77fd83e8b",
+  "path": "settings-first-ui",
+  "path_key": "settings-first-ui",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "git",
+    "ref": "https://github.com/umutc6230/ui-design-skills-pack/tree/main/skills/13-settings-first-ui",
+    "subpath": "skills/13-settings-first-ui",
+    "branch": "main"
+  }
+}

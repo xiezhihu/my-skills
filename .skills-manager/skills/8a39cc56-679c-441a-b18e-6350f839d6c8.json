@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "8a39cc56-679c-441a-b18e-6350f839d6c8",
+  "path": "classic-windows-form-ui",
+  "path_key": "classic-windows-form-ui",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "git",
+    "ref": "https://github.com/umutc6230/ui-design-skills-pack/tree/main/skills/16-classic-windows-form-ui",
+    "subpath": "skills/16-classic-windows-form-ui",
+    "branch": "main"
+  }
+}

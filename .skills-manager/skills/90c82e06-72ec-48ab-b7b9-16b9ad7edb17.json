@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "90c82e06-72ec-48ab-b7b9-16b9ad7edb17",
+  "path": "fluent-windows-11-ui",
+  "path_key": "fluent-windows-11-ui",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "git",
+    "ref": "https://github.com/umutc6230/ui-design-skills-pack/tree/main/skills/07-fluent-windows-11-ui",
+    "subpath": "skills/07-fluent-windows-11-ui",
+    "branch": "main"
+  }
+}

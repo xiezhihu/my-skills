@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "2fafba8b-5374-41b3-bb8f-a80b55feafd2",
+  "path": "ai-chat-tool-panel-ui",
+  "path_key": "ai-chat-tool-panel-ui",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "git",
+    "ref": "https://github.com/umutc6230/ui-design-skills-pack/tree/main/skills/15-ai-chat-tool-panel-ui",
+    "subpath": "skills/15-ai-chat-tool-panel-ui",
+    "branch": "main"
+  }
+}

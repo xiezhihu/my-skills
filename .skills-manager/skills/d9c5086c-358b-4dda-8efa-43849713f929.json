@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "d9c5086c-358b-4dda-8efa-43849713f929",
+  "path": "claymorphism-ui",
+  "path_key": "claymorphism-ui",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "git",
+    "ref": "https://github.com/umutc6230/ui-design-skills-pack/tree/main/skills/19-claymorphism-ui",
+    "subpath": "skills/19-claymorphism-ui",
+    "branch": "main"
+  }
+}

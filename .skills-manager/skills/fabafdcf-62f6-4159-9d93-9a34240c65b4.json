@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "fabafdcf-62f6-4159-9d93-9a34240c65b4",
+  "path": "data-table-admin-ui",
+  "path_key": "data-table-admin-ui",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "git",
+    "ref": "https://github.com/umutc6230/ui-design-skills-pack/tree/main/skills/14-data-table-admin-ui",
+    "subpath": "skills/14-data-table-admin-ui",
+    "branch": "main"
+  }
+}

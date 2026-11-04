@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "ac52860a-6e19-4565-a834-231aeb32c996",
+  "path": "cyberpunk-hud-ui",
+  "path_key": "cyberpunk-hud-ui",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "git",
+    "ref": "https://github.com/umutc6230/ui-design-skills-pack/tree/main/skills/17-cyberpunk-hud-ui",
+    "subpath": "skills/17-cyberpunk-hud-ui",
+    "branch": "main"
+  }
+}

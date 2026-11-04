@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "634d10f7-3413-4bad-9456-1ce008bae551",
+  "path": "glassmorphism-dashboard",
+  "path_key": "glassmorphism-dashboard",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "git",
+    "ref": "https://github.com/umutc6230/ui-design-skills-pack/tree/main/skills/01-glassmorphism-dashboard",
+    "subpath": "skills/01-glassmorphism-dashboard",
+    "branch": "main"
+  }
+}
