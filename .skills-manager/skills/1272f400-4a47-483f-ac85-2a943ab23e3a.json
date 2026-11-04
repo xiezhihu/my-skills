@@ -4,7 +4,9 @@
   "path": "ui-design-auto",
   "path_key": "ui-design-auto",
   "enabled": true,
-  "tags": [],
+  "tags": [
+    "UI设计"
+  ],
   "source": {
     "type": "local",
     "ref": null,
