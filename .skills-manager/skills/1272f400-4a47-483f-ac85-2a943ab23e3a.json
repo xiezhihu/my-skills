@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "1272f400-4a47-483f-ac85-2a943ab23e3a",
+  "path": "ui-design-auto",
+  "path_key": "ui-design-auto",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

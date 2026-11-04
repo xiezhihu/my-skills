@@ -1,0 +1,6 @@
+interface:
+  display_name: "界面设计自动选择"
+  short_description: "根据用途与平台自动选择十九种界面方案，按需组合布局、风格和交互"
+  default_prompt: "使用 $ui-design-auto，根据我的产品需求自动选择合适的界面方案并完成设计或实现。"
+policy:
+  allow_implicit_invocation: true
