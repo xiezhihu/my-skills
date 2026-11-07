@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "06126c12-2c23-4101-8bca-61c3e14e87e2",
+  "path": "qt-development-auto",
+  "path_key": "qt-development-auto",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

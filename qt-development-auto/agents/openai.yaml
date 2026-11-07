@@ -1,0 +1,6 @@
+interface:
+  display_name: "Qt 开发统一入口"
+  short_description: "自动选择十三个内置模块，完成 Qt 开发、设计、审查、测试和性能分析"
+  default_prompt: "使用 $qt-development-auto，根据我的任务自动选择合适的内置模块，并完成实现或分析。"
+policy:
+  allow_implicit_invocation: true

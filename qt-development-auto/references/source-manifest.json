@@ -1,0 +1,1194 @@
+{
+  "仓库": "https://github.com/TheQtCompanyRnD/agent-skills",
+  "提交": "6845f02d41171a6df8b6e6fe225b7f5d1a6f4adf",
+  "整理日期": "2026-11-05",
+  "模块数": 13,
+  "原始文件数": 169,
+  "路径说明": "上游路径相对原仓库，内置路径相对统一技能根目录；原始入口仅重命名，内容按字节保留。",
+  "文件": [
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/LICENSE.txt",
+      "内置路径": "modules/qt-canvas2d/LICENSE.txt",
+      "字节数": 1541,
+      "SHA256": "f1b7e919ce6f3a42144ca6c677c2b190801f83fb60ef26eed43d6173ba372f50"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/api-reference.md",
+      "内置路径": "modules/qt-canvas2d/references/api-reference.md",
+      "字节数": 25220,
+      "SHA256": "fb753219dbff78fd520ee09f20f7dbc04b30ae462642e925332d73bc4df63719"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/porting.md",
+      "内置路径": "modules/qt-canvas2d/references/porting.md",
+      "字节数": 7848,
+      "SHA256": "2df5f77cfc4309f9f096aa5e88a93b75d08620ba3e4f227ca5e37c1552480d15"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/recipes/analog-clock.qml",
+      "内置路径": "modules/qt-canvas2d/references/recipes/analog-clock.qml",
+      "字节数": 5528,
+      "SHA256": "72eccdb429ea523228b7adcc798eb8c96f52b206e66f17f13a45adf7adf91713"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/recipes/animated-line-chart.qml",
+      "内置路径": "modules/qt-canvas2d/references/recipes/animated-line-chart.qml",
+      "字节数": 5612,
+      "SHA256": "a4f2c160dffdccfb54e9424b4164e46a41c3cb1c818703d1425ebd19d170f704"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/recipes/bar-chart.qml",
+      "内置路径": "modules/qt-canvas2d/references/recipes/bar-chart.qml",
+      "字节数": 3809,
+      "SHA256": "4d63aac84dedb2c2cf85ac66db5ddaadc04800eab001f8cd8ae8b598c62b98a3"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/recipes/color-effects-and-clipping.qml",
+      "内置路径": "modules/qt-canvas2d/references/recipes/color-effects-and-clipping.qml",
+      "字节数": 5805,
+      "SHA256": "7c41ac98fe3af9211ec96394b7c7a9a2313e9dc5f378ef5573cae81358622a73"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/recipes/freehand-drawing.qml",
+      "内置路径": "modules/qt-canvas2d/references/recipes/freehand-drawing.qml",
+      "字节数": 4250,
+      "SHA256": "6bc865707bf9fc34d85687211d8c1f854df45c33d81d683e90be2078d59ea4b2"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/recipes/images-and-patterns.qml",
+      "内置路径": "modules/qt-canvas2d/references/recipes/images-and-patterns.qml",
+      "字节数": 3732,
+      "SHA256": "a7077b6787f2515c918839780ac72acd5746ef58dd5945515313e45ec051fdc8"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/recipes/level-meter.qml",
+      "内置路径": "modules/qt-canvas2d/references/recipes/level-meter.qml",
+      "字节数": 5932,
+      "SHA256": "ce826f9f136f52180e39ab523a747dcd322bf1f3447e1547ef5bb3ce839f216d"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/recipes/node-link-diagram.qml",
+      "内置路径": "modules/qt-canvas2d/references/recipes/node-link-diagram.qml",
+      "字节数": 4834,
+      "SHA256": "05ce09205f0030749168f4bf79fff03a63dee9372e276d47bd0f0860a0fa3e6f"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/recipes/oscilloscope.qml",
+      "内置路径": "modules/qt-canvas2d/references/recipes/oscilloscope.qml",
+      "字节数": 4195,
+      "SHA256": "4261d1af98dd6b773a112c4e1fc7e1e96000fc177be5345bab002cba619fd425"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/recipes/pan-zoom-viewport.qml",
+      "内置路径": "modules/qt-canvas2d/references/recipes/pan-zoom-viewport.qml",
+      "字节数": 6475,
+      "SHA256": "3717367f28186f28513a82a7a8124c6c0091c4950a9d10e254fb89314ab17c98"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/recipes/pie-donut-chart.qml",
+      "内置路径": "modules/qt-canvas2d/references/recipes/pie-donut-chart.qml",
+      "字节数": 7254,
+      "SHA256": "b31959dd3d2a9d3e91e7d437c714bd4c7f3f1c0feeaba26e1833868f5a8695e8"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/recipes/progress-ring.qml",
+      "内置路径": "modules/qt-canvas2d/references/recipes/progress-ring.qml",
+      "字节数": 3365,
+      "SHA256": "5da83e362b1a25cb0b43801f6e1ce71bbb48cf60c32ad0caf96dd96f2f54f18b"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/recipes/radial-gauge.qml",
+      "内置路径": "modules/qt-canvas2d/references/recipes/radial-gauge.qml",
+      "字节数": 4999,
+      "SHA256": "d5016e1abb2f0a4fee8bdd0b9592da7ddf89cf1679dbd647873261d1bc8756c9"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/recipes/rotary-knob.qml",
+      "内置路径": "modules/qt-canvas2d/references/recipes/rotary-knob.qml",
+      "字节数": 7555,
+      "SHA256": "84916a6dbd753d15116fc53c4fee13a9ea212a89b90985094fa0544fe1b4e6e4"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/recipes/scatter-plot.qml",
+      "内置路径": "modules/qt-canvas2d/references/recipes/scatter-plot.qml",
+      "字节数": 4613,
+      "SHA256": "901f4b0d2933723afe88d82de699613fbfe82fe73d77e126df61faeddc3e0565"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/recipes/shadowed-card-button.qml",
+      "内置路径": "modules/qt-canvas2d/references/recipes/shadowed-card-button.qml",
+      "字节数": 4461,
+      "SHA256": "027717f5a8bf5acf92bc1f266a13358cf29de05c9ca73685e4d3eeb27452b355"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/recipes/sparkline-delegate.qml",
+      "内置路径": "modules/qt-canvas2d/references/recipes/sparkline-delegate.qml",
+      "字节数": 5341,
+      "SHA256": "0f8b309aad699eafbbe1ca67fac130b1928e9fdbbd8412e376111d647eb18c6c"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/recipes/static-shapes.qml",
+      "内置路径": "modules/qt-canvas2d/references/recipes/static-shapes.qml",
+      "字节数": 3429,
+      "SHA256": "294d33c770ef1466707c6c9e74980cd5071f801f00d78643a2f81d0403885335"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/recipes/text-panel.qml",
+      "内置路径": "modules/qt-canvas2d/references/recipes/text-panel.qml",
+      "字节数": 5138,
+      "SHA256": "8c0b3ae07f3216edca4185a14a2e7afde9aad20bfaed0ffd02a97c4f952819c4"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/references/rules.md",
+      "内置路径": "modules/qt-canvas2d/references/rules.md",
+      "字节数": 3907,
+      "SHA256": "fd97be27aa612979eef3e5edeb113956633e499c06da96e77c17557e8b211f45"
+    },
+    {
+      "模块": "qt-canvas2d",
+      "上游路径": "skills/qt-canvas2d/SKILL.md",
+      "内置路径": "modules/qt-canvas2d/原始说明.txt",
+      "字节数": 13745,
+      "SHA256": "7a5a2baeba6afcdd2cfb91c0222c8f9c59544685ac34d9459d74ddddf680b3f6"
+    },
+    {
+      "模块": "qt-cmake-project",
+      "上游路径": "skills/qt-cmake-project/LICENSE.txt",
+      "内置路径": "modules/qt-cmake-project/LICENSE.txt",
+      "字节数": 1541,
+      "SHA256": "f1b7e919ce6f3a42144ca6c677c2b190801f83fb60ef26eed43d6173ba372f50"
+    },
+    {
+      "模块": "qt-cmake-project",
+      "上游路径": "skills/qt-cmake-project/references/common-mistakes.md",
+      "内置路径": "modules/qt-cmake-project/references/common-mistakes.md",
+      "字节数": 9308,
+      "SHA256": "4e7a2fcd6851575f80fb9a30817a271301172d94d127dbc2efd3453592307809"
+    },
+    {
+      "模块": "qt-cmake-project",
+      "上游路径": "skills/qt-cmake-project/references/configure.md",
+      "内置路径": "modules/qt-cmake-project/references/configure.md",
+      "字节数": 1289,
+      "SHA256": "0dc9e24b63fffc6597be858089d0ebc6282393553308c5d32f4414837c0f3dd2"
+    },
+    {
+      "模块": "qt-cmake-project",
+      "上游路径": "skills/qt-cmake-project/references/modular-architecture.md",
+      "内置路径": "modules/qt-cmake-project/references/modular-architecture.md",
+      "字节数": 9165,
+      "SHA256": "cb57c87fdf18f88b3b069b0698f46f715c6500f43c194c3891506b5e26c6e38c"
+    },
+    {
+      "模块": "qt-cmake-project",
+      "上游路径": "skills/qt-cmake-project/references/qml-integration.md",
+      "内置路径": "modules/qt-cmake-project/references/qml-integration.md",
+      "字节数": 12636,
+      "SHA256": "b72c50fd032c36994b978e5630c3bb21401aa92bf2e661d2dbe99669c4491490"
+    },
+    {
+      "模块": "qt-cmake-project",
+      "上游路径": "skills/qt-cmake-project/references/resources.md",
+      "内置路径": "modules/qt-cmake-project/references/resources.md",
+      "字节数": 8402,
+      "SHA256": "c751f2b4a7daca6f41af82df2d51cdb5c5c07e5e69396ae6f65bd6f9f4fe71c7"
+    },
+    {
+      "模块": "qt-cmake-project",
+      "上游路径": "skills/qt-cmake-project/references/simple-project.md",
+      "内置路径": "modules/qt-cmake-project/references/simple-project.md",
+      "字节数": 4856,
+      "SHA256": "db7b6263758d5772f8898abac550279c1898d4578937bc62552c62e446c56744"
+    },
+    {
+      "模块": "qt-cmake-project",
+      "上游路径": "skills/qt-cmake-project/SKILL.md",
+      "内置路径": "modules/qt-cmake-project/原始说明.txt",
+      "字节数": 10330,
+      "SHA256": "f2cae0176afa4c9171a4eb0000d84515d36bdbb9eb98c178aaadb6294eaeb002"
+    },
+    {
+      "模块": "qt-cpp-docs",
+      "上游路径": "skills/qt-cpp-docs/LICENSE.txt",
+      "内置路径": "modules/qt-cpp-docs/LICENSE.txt",
+      "字节数": 1541,
+      "SHA256": "f1b7e919ce6f3a42144ca6c677c2b190801f83fb60ef26eed43d6173ba372f50"
+    },
+    {
+      "模块": "qt-cpp-docs",
+      "上游路径": "skills/qt-cpp-docs/SKILL.md",
+      "内置路径": "modules/qt-cpp-docs/原始说明.txt",
+      "字节数": 25300,
+      "SHA256": "4008e6ea97185d7a52880d03cd6de7bde380a1d0922d1b81bd6b83587794adee"
+    },
+    {
+      "模块": "qt-cpp-review",
+      "上游路径": "skills/qt-cpp-review/LICENSE.txt",
+      "内置路径": "modules/qt-cpp-review/LICENSE.txt",
+      "字节数": 1541,
+      "SHA256": "f1b7e919ce6f3a42144ca6c677c2b190801f83fb60ef26eed43d6173ba372f50"
+    },
+    {
+      "模块": "qt-cpp-review",
+      "上游路径": "skills/qt-cpp-review/platforms/windsurf.md",
+      "内置路径": "modules/qt-cpp-review/platforms/windsurf.md",
+      "字节数": 1344,
+      "SHA256": "cd0a2814c9b521478ae40dff04e62b6cf8f5709b4e0d1c51851f3ea4894c8715"
+    },
+    {
+      "模块": "qt-cpp-review",
+      "上游路径": "skills/qt-cpp-review/references/agent-rules.md",
+      "内置路径": "modules/qt-cpp-review/references/agent-rules.md",
+      "字节数": 10703,
+      "SHA256": "a5d1c5506845aaf8fc7ae769fcbfc8925f8eaf941da691810667f88b69decceb"
+    },
+    {
+      "模块": "qt-cpp-review",
+      "上游路径": "skills/qt-cpp-review/references/lint-scripts/qt_review_lint.py",
+      "内置路径": "modules/qt-cpp-review/references/lint-scripts/qt_review_lint.py",
+      "字节数": 38598,
+      "SHA256": "05fd47847e77778bb464c121a4248f2cba1c2f6d7ab3e10df943f1808b8b4b15"
+    },
+    {
+      "模块": "qt-cpp-review",
+      "上游路径": "skills/qt-cpp-review/references/qt-deprecated-classes.md",
+      "内置路径": "modules/qt-cpp-review/references/qt-deprecated-classes.md",
+      "字节数": 2521,
+      "SHA256": "12174f03fa598b0b1098e958b5198d1feed8fb772ca0afd2cbed9096f8dc4917"
+    },
+    {
+      "模块": "qt-cpp-review",
+      "上游路径": "skills/qt-cpp-review/references/qt-framework-checklist.md",
+      "内置路径": "modules/qt-cpp-review/references/qt-framework-checklist.md",
+      "字节数": 7103,
+      "SHA256": "e05cf4f8b13f0565c223ea5ff4827b038f5b4bc98626275106aa9965d65561a4"
+    },
+    {
+      "模块": "qt-cpp-review",
+      "上游路径": "skills/qt-cpp-review/references/qt-review-checklist.md",
+      "内置路径": "modules/qt-cpp-review/references/qt-review-checklist.md",
+      "字节数": 11370,
+      "SHA256": "2220434ac88922e9bde12da3856e3dd85411e3f740ade2372d9538f6ee1c1e34"
+    },
+    {
+      "模块": "qt-cpp-review",
+      "上游路径": "skills/qt-cpp-review/SKILL.md",
+      "内置路径": "modules/qt-cpp-review/原始说明.txt",
+      "字节数": 12169,
+      "SHA256": "b1c47b245295a9a3e0854f78b621968574059a7de11f3fa7d1adec69d0d4c29c"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/BadgeLabel.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/BadgeLabel.qml",
+      "字节数": 4250,
+      "SHA256": "67eae78e86347c9e01dd9996b99e16593ddfd76b021471cac0db6642028051e7"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/BadgeLabelStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/BadgeLabelStyle.qml",
+      "字节数": 3573,
+      "SHA256": "4e4d7f3d4d1e3f40fc7f6749f789ee16fafee0c138a2076124b8e29812b388a2"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/BadgeNotification.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/BadgeNotification.qml",
+      "字节数": 4048,
+      "SHA256": "175558d231478269623723a2089bed14bb6b4a3eb0b96c305c3ee948271f31d7"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/BadgeNotificationStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/BadgeNotificationStyle.qml",
+      "字节数": 2891,
+      "SHA256": "5df4bf09f270207356b9ad277c250063e6006a3d034293139ddf239e0f038848"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/Button.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/Button.qml",
+      "字节数": 5958,
+      "SHA256": "1f90ca100c0b1d02d5337771c15247269b7bbea981bb9e1449114237da4a6692"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/ButtonStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/ButtonStyle.qml",
+      "字节数": 8613,
+      "SHA256": "61d33eb87f1c427649c3141be07abc76bea68d03cf4a65d74cf1055beef4c034"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/Card.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/Card.qml",
+      "字节数": 23803,
+      "SHA256": "ccae198800eed1166a3fc4b66d2ddfa4991afea20d4ba92634624af8e9385c91"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/CardStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/CardStyle.qml",
+      "字节数": 4564,
+      "SHA256": "aba5cd3f824401f2301d8125d492fbda27a5a51c088558b97580dccaa3254b74"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/CheckBox.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/CheckBox.qml",
+      "字节数": 4396,
+      "SHA256": "0a2e28c2dfa07aa6f642cb68a3768efbe438e0713d2767a60ad9b0350446339c"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/CheckBoxStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/CheckBoxStyle.qml",
+      "字节数": 5652,
+      "SHA256": "02e7c2695769125ad8c30661cfc5805a040896f40337673f67f6fc5b7d207f8b"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/ComboBox.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/ComboBox.qml",
+      "字节数": 7507,
+      "SHA256": "2ce364cc90ad999a73da1b01b87b7ce83c3744dee733c0dcf7e618214987fb65"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/ComboBoxStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/ComboBoxStyle.qml",
+      "字节数": 7120,
+      "SHA256": "c112350b5f5c900297b2dc2d1208027d0f1d21eea7a3190b2e23ad80e72eb024"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/Dialog.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/Dialog.qml",
+      "字节数": 4388,
+      "SHA256": "44c4d171dec670858c2071a5c63ef9449dc8bdcc966b09068fa692f003c1e34d"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/DialogButtonBox.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/DialogButtonBox.qml",
+      "字节数": 2075,
+      "SHA256": "77a3d496b1b0279bba9a661170f59c00bde233954e5b0f30346f8dbe571e1270"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/DialogButtonBoxStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/DialogButtonBoxStyle.qml",
+      "字节数": 1226,
+      "SHA256": "953021452aa67a8cc142989dd2e95d918062e1132ba7872f9cf08615e3b99e14"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/DialogStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/DialogStyle.qml",
+      "字节数": 2222,
+      "SHA256": "9e996cbc951aa7e94b16f9a5235f7242bfa50dc17a1bd4e29bc42becfa467485"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/IconButton.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/IconButton.qml",
+      "字节数": 4254,
+      "SHA256": "c5ba04d52ada8b1ce672539b59fa49eae74a98e865dbaffa2596c21bc835afa1"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/IconButtonStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/IconButtonStyle.qml",
+      "字节数": 4867,
+      "SHA256": "0deb42b788d5628a2c0866ab6c9e8ab426ffbdb5f5b894cfd5c50a2f651bbea1"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/Indicator.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/Indicator.qml",
+      "字节数": 2348,
+      "SHA256": "723029b914bafec005171c808cdeafb34066187d26ef6288b99795f8ce801df4"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/IndicatorStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/IndicatorStyle.qml",
+      "字节数": 1540,
+      "SHA256": "4ffcdb1cdcf672a1b2c70bdf005d83e96f71e8ca056f045bbf57905993ec75f7"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/ItemDelegate.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/ItemDelegate.qml",
+      "字节数": 2861,
+      "SHA256": "31c8ae4b29652ff29ea69391541dcc860fe52a894f7d041778764a109bef0d15"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/ItemDelegateStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/ItemDelegateStyle.qml",
+      "字节数": 2518,
+      "SHA256": "ad2812f5d952d6852c4a289f8f9a58955094684bfa22ab7b5090e5492ce0a2c0"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/Label.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/Label.qml",
+      "字节数": 1520,
+      "SHA256": "c4afed85f690fe7e18af4f066bd784d73e70a6fdd0924fc992fe23f246766eb6"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/LabelStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/LabelStyle.qml",
+      "字节数": 1289,
+      "SHA256": "40bf12ebce1c8b9819c6e80ba76ab8bac78d2d4f1082f6dff86a29d6e3a85a69"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/LinkInline.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/LinkInline.qml",
+      "字节数": 1976,
+      "SHA256": "c6d658d6a13e3f227457bc27827d235b85dc5787915620a72e67865d2719580e"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/LinkInlineStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/LinkInlineStyle.qml",
+      "字节数": 1506,
+      "SHA256": "92d6386ef0f9acbf32aaf969df5049719cec404ec18875d3bfd57c7aa4d2c75d"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/LinkList.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/LinkList.qml",
+      "字节数": 2515,
+      "SHA256": "c137a840b7732808e4d7e091a28f9c8f198a161be231514c0dc5b34dd2f8d34a"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/LinkListStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/LinkListStyle.qml",
+      "字节数": 1783,
+      "SHA256": "74ab0a3419c0d0efa714c14c37acf43af02b5c11faff69e9c664b51455670b51"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/LinkStandalone.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/LinkStandalone.qml",
+      "字节数": 2552,
+      "SHA256": "7e63c133ed98e8cc4407c04d20816a4dd037c92d1319e0161b58c2e140ced4ab"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/LinkStandaloneStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/LinkStandaloneStyle.qml",
+      "字节数": 1695,
+      "SHA256": "e79ae4a1c9e4519914f120e35c6c5dc52d460316eb6a9e8443baeff6651e8f2e"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/ListItem.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/ListItem.qml",
+      "字节数": 6693,
+      "SHA256": "d9ac59a90c22ceda6f17c8459be5eefc843e8d07fb0c65c9b8b20daed7e05988"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/ListItemStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/ListItemStyle.qml",
+      "字节数": 3019,
+      "SHA256": "373bbc7dca318353f9d387e2b96a20f0e65199e166ef3250b33b69cfc7822da7"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/Menu.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/Menu.qml",
+      "字节数": 2052,
+      "SHA256": "7c507583607c9163d66624a7fb91d13a1ad1edee1db607e7cbae3252cf392c39"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/MenuButton.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/MenuButton.qml",
+      "字节数": 4693,
+      "SHA256": "cec0dfc78929845cd02a2e286d02903f7d081f379290499b60f4159719005084"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/MenuButtonStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/MenuButtonStyle.qml",
+      "字节数": 3165,
+      "SHA256": "c91b76afc37d7cfe08f60ee41f38330b4dec5ef0866c25ea45c06541a12a1f73"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/MenuItem.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/MenuItem.qml",
+      "字节数": 2791,
+      "SHA256": "76c6bd07a14c36080439985804d2dd282846dec39242a982cd4d53c8ece2bdfd"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/MenuItemStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/MenuItemStyle.qml",
+      "字节数": 1541,
+      "SHA256": "90f27207cd5bbca90de1ae1818a3e30b3e921d834134d3200edef4db45ac22bb"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/MenuStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/MenuStyle.qml",
+      "字节数": 1317,
+      "SHA256": "138e44b15f135d1afbb308abf8f57ee8e032aa6fa666ce86a8547d736dec28f8"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/PaginationDot.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/PaginationDot.qml",
+      "字节数": 2760,
+      "SHA256": "c298d5dd596046fdb80418a5c9685a171d8f3ea48004d8444dc001fdb9ea01e5"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/PaginationDotStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/PaginationDotStyle.qml",
+      "字节数": 2368,
+      "SHA256": "ade5c43f75a035a00a110235ca7a33ec1770214a47a404fd2f6363cbeee4cb63"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/PaginationIndex.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/PaginationIndex.qml",
+      "字节数": 2378,
+      "SHA256": "c2a5d3dc58db89f1f30f2c6a0e180983f71478ed3543f8aa49d9614c6aac13d7"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/PaginationIndexStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/PaginationIndexStyle.qml",
+      "字节数": 1536,
+      "SHA256": "fa4c6e6ec7ea56ad69e477a3a5432499f6c0d737947df79ee4e41a5891e4a4d6"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/PaginationNumber.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/PaginationNumber.qml",
+      "字节数": 11219,
+      "SHA256": "169b5aa65074a0eddc3f47acac0cd6344370be5a8edc33ee7949c7b9b12e4012"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/PaginationNumberStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/PaginationNumberStyle.qml",
+      "字节数": 3713,
+      "SHA256": "64a036fafd6358f8716e60e23028c5fa71691b2a42441dd232daac583b59535d"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/Popup.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/Popup.qml",
+      "字节数": 1474,
+      "SHA256": "d3fcefac31aef62b06f1c74dbeca28d60f7a866352a50217361403af01bb5547"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/PopupStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/PopupStyle.qml",
+      "字节数": 1067,
+      "SHA256": "35571cf822368c3eb503c1f84100167d0396f23d34a2facf1bdc3d23f7c4e34d"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/ProgressBar.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/ProgressBar.qml",
+      "字节数": 3231,
+      "SHA256": "51515f297bff528a866388cf4bb4807320262dc05042edfb8e14375259c25a72"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/ProgressBarStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/ProgressBarStyle.qml",
+      "字节数": 1628,
+      "SHA256": "2917e7644635d77efd5d0286230ef7ade87c186c457d1464b1c4caf765c11e6e"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/RadioButton.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/RadioButton.qml",
+      "字节数": 3152,
+      "SHA256": "b89e8975ea9094ca8b283e7a597eac300a44a610c97be816e6e3a3cf712cc016"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/RadioButtonStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/RadioButtonStyle.qml",
+      "字节数": 3163,
+      "SHA256": "7562d036023dc66dc191f2a638a93517a5f541ad7adbae3aa85c33878333fa67"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/RangeSlider.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/RangeSlider.qml",
+      "字节数": 5191,
+      "SHA256": "3c88fd7e10f1b39b90a69bb8e14b52d25a9b808360c69faddb49124b4b662ec8"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/RangeSliderStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/RangeSliderStyle.qml",
+      "字节数": 3873,
+      "SHA256": "2116d385c45922a045af42567d4513c963cc1106b0b17db40bb6fb8a77f5dc3c"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/ScrollBar.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/ScrollBar.qml",
+      "字节数": 2769,
+      "SHA256": "1bc5cd9d07dd0907dbc9cdb74e0dedb261c2788a8e32faf074522bf3639c2703"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/ScrollBarStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/ScrollBarStyle.qml",
+      "字节数": 3485,
+      "SHA256": "8f4caebe1e7080fb2073d5af827bca56724fd14873db8b61aef4eb79b0ca89dc"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/SearchField.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/SearchField.qml",
+      "字节数": 6301,
+      "SHA256": "44e089df6cb796bfbee0f336fcf7294e85f305c7f86af819913baae8204f2ee6"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/SearchFieldStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/SearchFieldStyle.qml",
+      "字节数": 4247,
+      "SHA256": "3abbf9131fb018a831a35cd77f745e471fe2087fbe11a3b48b715e27fd6daa9f"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/SearchMenu.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/SearchMenu.qml",
+      "字节数": 15308,
+      "SHA256": "0a11bc49c359cb3e644d19697779d9bec23e243dc3dcf0e7613eed3b399b4a6c"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/SearchMenuStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/SearchMenuStyle.qml",
+      "字节数": 4872,
+      "SHA256": "ccb8e939d29747324c59f8dcadae9bfbf439630824da79659a8d94f0a4ed2cfc"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/Slider.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/Slider.qml",
+      "字节数": 3950,
+      "SHA256": "d74273487c4d3c1a7d9665f467cc5b27c634eab0f0a2fa809287afe9060b4a7a"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/SliderStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/SliderStyle.qml",
+      "字节数": 3961,
+      "SHA256": "1c1fb5c4d08d14178e09dfbed48e04737d9c93160db1ddb089ff8a710663556c"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/SortFilterModel.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/SortFilterModel.qml",
+      "字节数": 1717,
+      "SHA256": "2d95dbf5b1b63c7765a1210b526c7d3b78787dad25461bc3f22aedd594b057ae"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/SpinBox.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/SpinBox.qml",
+      "字节数": 6081,
+      "SHA256": "c141834812dfeceaf1bfe0819b12cc810dfccb68be115c4a2bc5a6292bf73178"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/SpinBoxStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/SpinBoxStyle.qml",
+      "字节数": 3701,
+      "SHA256": "4bb67a8f300ae8223ebbaf2ac3c9f4d98c307da237e9fdfb5ca1909c25abeafd"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/Switch.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/Switch.qml",
+      "字节数": 3718,
+      "SHA256": "f7f03153386786b4349dfa7979f5230d0a0ccdbeeeb5c77ad6ff73eed2836fe7"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/SwitchStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/SwitchStyle.qml",
+      "字节数": 3179,
+      "SHA256": "ebb14b802fe04a5406b0cf8145c88670b68a92b2378d7049679994be8cff9807"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/TabBar.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/TabBar.qml",
+      "字节数": 2094,
+      "SHA256": "9e56ea753920fc6a5de467b92f45f8d94a7d0fe434ec134a69ba8ed18f2023e7"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/TabBarStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/TabBarStyle.qml",
+      "字节数": 927,
+      "SHA256": "875802d9b2ae99143280171ce22764075932eef2720716abb7a3568ebefd5c18"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/TabButton.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/TabButton.qml",
+      "字节数": 4517,
+      "SHA256": "463eaee920feb056f6eb26ccb35e9eaf8170ba73d6373fe499bc09473ecdaffe"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/TabButtonStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/TabButtonStyle.qml",
+      "字节数": 4479,
+      "SHA256": "306abb0ddf08c6a2cef31fc7ec766e05ebf835ffc1b81dd4d8461eac41986d56"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/Tag.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/Tag.qml",
+      "字节数": 4607,
+      "SHA256": "e4a83a91c1a8c69fa56c8afddc54305f756d9b670046834c2be8fc991b24aeaa"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/TagStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/TagStyle.qml",
+      "字节数": 3326,
+      "SHA256": "189dd39901f57121facf49ddcdd0d58fd032c9a3648aae376428c8b4cf69202a"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/TextField.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/TextField.qml",
+      "字节数": 7338,
+      "SHA256": "b3971fb2d507dd58d3a94874affe51a8f086441ec8835baed55ccc91181ba68a"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/TextFieldStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/TextFieldStyle.qml",
+      "字节数": 4875,
+      "SHA256": "50000b4c5eb79ad171f884b257a0c520b54973d3c285b9d6cc9b8de7051b5f07"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/Toolbar.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/Toolbar.qml",
+      "字节数": 1640,
+      "SHA256": "8add536b4bf7c227a5bdfbefe6de805a0d9a423ab43ed747b30bf27b6c8bd4b7"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/ToolbarStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/ToolbarStyle.qml",
+      "字节数": 1071,
+      "SHA256": "d0688d363da2ec03a7240f40439e95ce5adb4d984f7c9fbc950001e80fd5835b"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/ToolTip.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/ToolTip.qml",
+      "字节数": 7724,
+      "SHA256": "8358cee8463e7cee43fa6cfd7624659f126d88c144bc72beec29762337c01de9"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/ToolTipStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/ToolTipStyle.qml",
+      "字节数": 2302,
+      "SHA256": "1bf177fbc0f20b9e262c1a39708cd4c4d185fe5605f7046d5bd57f24a20fed80"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/TreeViewDelegate.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/TreeViewDelegate.qml",
+      "字节数": 4539,
+      "SHA256": "caa86278d56ec37ecfbec0b373cbc115d2e605cf3e9f53cfbcdece7e5165783d"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/assets/qt-controls/TreeViewDelegateStyle.qml",
+      "内置路径": "modules/qt-figma-component-generation/assets/qt-controls/TreeViewDelegateStyle.qml",
+      "字节数": 2991,
+      "SHA256": "27af1db6ec5cf5c4140bb6bd233a0ffb48f1f7b8ffa10da4c305ba1433580581"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/references/Button.qml",
+      "内置路径": "modules/qt-figma-component-generation/references/Button.qml",
+      "字节数": 11955,
+      "SHA256": "ad4f04e2d59395b222a86439170509ab16d75e1010df113355fb91132ff589ff"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/references/Checkbox.qml",
+      "内置路径": "modules/qt-figma-component-generation/references/Checkbox.qml",
+      "字节数": 7453,
+      "SHA256": "ca880a348c6497d5fb4f6e0523d7dba2a040c2a8e4dea9909c46378c750d8e9d"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/references/Select.qml",
+      "内置路径": "modules/qt-figma-component-generation/references/Select.qml",
+      "字节数": 10111,
+      "SHA256": "b1a5aa9520b4c8a05c6cd2a09f597600f1b5bdf9a341793d7a493c566bb1bad6"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/references/TextField.qml",
+      "内置路径": "modules/qt-figma-component-generation/references/TextField.qml",
+      "字节数": 7547,
+      "SHA256": "1bf5a5049e8b4e5b061b9bf99fd428b9dbc47902b3d1ce59c6b6403ac62c6fef"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/references/Toggle.qml",
+      "内置路径": "modules/qt-figma-component-generation/references/Toggle.qml",
+      "字节数": 4868,
+      "SHA256": "42eafbd3af1e2ee4b8130d48d90545dbc7372e2479269fd53ab0b7bc44745917"
+    },
+    {
+      "模块": "qt-figma-component-generation",
+      "上游路径": "skills/qt-figma-component-generation/SKILL.md",
+      "内置路径": "modules/qt-figma-component-generation/原始说明.txt",
+      "字节数": 17081,
+      "SHA256": "5982da01d177060f3bbd051f9c41e647a39842da8ea32fea43faa4ed4d2fea11"
+    },
+    {
+      "模块": "qt-figma-token-extraction",
+      "上游路径": "skills/qt-figma-token-extraction/examples/FontInterface.qml",
+      "内置路径": "modules/qt-figma-token-extraction/examples/FontInterface.qml",
+      "字节数": 3266,
+      "SHA256": "6a4f7062f65735c86073e397b2e2e3a1542c9b1f069e090fc725ee21fdb21e82"
+    },
+    {
+      "模块": "qt-figma-token-extraction",
+      "上游路径": "skills/qt-figma-token-extraction/examples/Primitives.qml",
+      "内置路径": "modules/qt-figma-token-extraction/examples/Primitives.qml",
+      "字节数": 3016,
+      "SHA256": "b7750988e8482f0e9a2970702725b64fdf05c547547c003fee70bc8fbc393b08"
+    },
+    {
+      "模块": "qt-figma-token-extraction",
+      "上游路径": "skills/qt-figma-token-extraction/examples/Spacing.qml",
+      "内置路径": "modules/qt-figma-token-extraction/examples/Spacing.qml",
+      "字节数": 3567,
+      "SHA256": "beace491723316ab6b56b5a87a30485ab01952c38660edd13f135c94038fabdb"
+    },
+    {
+      "模块": "qt-figma-token-extraction",
+      "上游路径": "skills/qt-figma-token-extraction/examples/Theme.qml",
+      "内置路径": "modules/qt-figma-token-extraction/examples/Theme.qml",
+      "字节数": 5278,
+      "SHA256": "bcae29f5af7fbd191d407ed5a5bd7edf5ffb55c69d5fed7fbb99e3fad62c4db5"
+    },
+    {
+      "模块": "qt-figma-token-extraction",
+      "上游路径": "skills/qt-figma-token-extraction/examples/Typography.qml",
+      "内置路径": "modules/qt-figma-token-extraction/examples/Typography.qml",
+      "字节数": 3041,
+      "SHA256": "5fbd0700ab1305d3d7a968697b5caac1f378be9be49c0d450376c6ea36ab21ff"
+    },
+    {
+      "模块": "qt-figma-token-extraction",
+      "上游路径": "skills/qt-figma-token-extraction/references/token-mapping.md",
+      "内置路径": "modules/qt-figma-token-extraction/references/token-mapping.md",
+      "字节数": 5792,
+      "SHA256": "5a43141e26019a36ff581aa96aa8163b257cdf7a7d0c991e0146eb300549ac5b"
+    },
+    {
+      "模块": "qt-figma-token-extraction",
+      "上游路径": "skills/qt-figma-token-extraction/SKILL.md",
+      "内置路径": "modules/qt-figma-token-extraction/原始说明.txt",
+      "字节数": 30159,
+      "SHA256": "3d3a781b30e7eab997b7aa7919ed386d29f7cafe24c84895764e407d1f39eab8"
+    },
+    {
+      "模块": "qt-qml",
+      "上游路径": "skills/qt-qml/LICENSE.txt",
+      "内置路径": "modules/qt-qml/LICENSE.txt",
+      "字节数": 1541,
+      "SHA256": "f1b7e919ce6f3a42144ca6c677c2b190801f83fb60ef26eed43d6173ba372f50"
+    },
+    {
+      "模块": "qt-qml",
+      "上游路径": "skills/qt-qml/platforms/windsurf.md",
+      "内置路径": "modules/qt-qml/platforms/windsurf.md",
+      "字节数": 1527,
+      "SHA256": "88e088b3922e62ff6997385607dbbfe155832594108b47db27806ce701161728"
+    },
+    {
+      "模块": "qt-qml",
+      "上游路径": "skills/qt-qml/references/qmlpreview.md",
+      "内置路径": "modules/qt-qml/references/qmlpreview.md",
+      "字节数": 7057,
+      "SHA256": "0cc5a08dc620a02c8442c776837659a34552286b140863ed5bd14d41fbaaf0c6"
+    },
+    {
+      "模块": "qt-qml",
+      "上游路径": "skills/qt-qml/SKILL.md",
+      "内置路径": "modules/qt-qml/原始说明.txt",
+      "字节数": 18051,
+      "SHA256": "5d14951df146fc4f1fa904d4e281ca802b906f7a4bcff8de91dfc3227e54f57f"
+    },
+    {
+      "模块": "qt-qml-docs",
+      "上游路径": "skills/qt-qml-docs/LICENSE.txt",
+      "内置路径": "modules/qt-qml-docs/LICENSE.txt",
+      "字节数": 1541,
+      "SHA256": "f1b7e919ce6f3a42144ca6c677c2b190801f83fb60ef26eed43d6173ba372f50"
+    },
+    {
+      "模块": "qt-qml-docs",
+      "上游路径": "skills/qt-qml-docs/platforms/windsurf.md",
+      "内置路径": "modules/qt-qml-docs/platforms/windsurf.md",
+      "字节数": 1135,
+      "SHA256": "a45a937597f621dc52c9cce87fd25eb954a77f8507d9bba3881d0f32ca4272b0"
+    },
+    {
+      "模块": "qt-qml-docs",
+      "上游路径": "skills/qt-qml-docs/SKILL.md",
+      "内置路径": "modules/qt-qml-docs/原始说明.txt",
+      "字节数": 10172,
+      "SHA256": "4e35c3869104939de0beb071fb27c54ec86d9a455e38854fa95e030e072d168f"
+    },
+    {
+      "模块": "qt-qml-profiler",
+      "上游路径": "skills/qt-qml-profiler/LICENSE.txt",
+      "内置路径": "modules/qt-qml-profiler/LICENSE.txt",
+      "字节数": 1541,
+      "SHA256": "f1b7e919ce6f3a42144ca6c677c2b190801f83fb60ef26eed43d6173ba372f50"
+    },
+    {
+      "模块": "qt-qml-profiler",
+      "上游路径": "skills/qt-qml-profiler/references/qml-performance-anti-patterns.md",
+      "内置路径": "modules/qt-qml-profiler/references/qml-performance-anti-patterns.md",
+      "字节数": 6056,
+      "SHA256": "9a84da40419660dba19cc2ae8b563d44f0cd5bd39dff3c428038bbca88d3a1bc"
+    },
+    {
+      "模块": "qt-qml-profiler",
+      "上游路径": "skills/qt-qml-profiler/references/scripts/parse-qmlprofiler-trace.py",
+      "内置路径": "modules/qt-qml-profiler/references/scripts/parse-qmlprofiler-trace.py",
+      "字节数": 15357,
+      "SHA256": "f071f8406c4ab3f09eb4efb1775ba414e533d50a321d0ea5ec1a50f261cdb62c"
+    },
+    {
+      "模块": "qt-qml-profiler",
+      "上游路径": "skills/qt-qml-profiler/SKILL.md",
+      "内置路径": "modules/qt-qml-profiler/原始说明.txt",
+      "字节数": 25166,
+      "SHA256": "76526f8a0718f71588b4c1f3ca49e98c149f8865989381c89b3e03bd18e2de6e"
+    },
+    {
+      "模块": "qt-qml-review",
+      "上游路径": "skills/qt-qml-review/LICENSE.txt",
+      "内置路径": "modules/qt-qml-review/LICENSE.txt",
+      "字节数": 1541,
+      "SHA256": "f1b7e919ce6f3a42144ca6c677c2b190801f83fb60ef26eed43d6173ba372f50"
+    },
+    {
+      "模块": "qt-qml-review",
+      "上游路径": "skills/qt-qml-review/platforms/windsurf.md",
+      "内置路径": "modules/qt-qml-review/platforms/windsurf.md",
+      "字节数": 1743,
+      "SHA256": "996220e2ec2bc948cbddf38c5f239e508cf5f70b3441e5d9b179ea579babb831"
+    },
+    {
+      "模块": "qt-qml-review",
+      "上游路径": "skills/qt-qml-review/references/agent-rules.md",
+      "内置路径": "modules/qt-qml-review/references/agent-rules.md",
+      "字节数": 11012,
+      "SHA256": "7eb7b777601196040dcd2bd499aff5e18657b24626a7e4aca6abebe8668ed647"
+    },
+    {
+      "模块": "qt-qml-review",
+      "上游路径": "skills/qt-qml-review/references/lint-scripts/qt_qml_lint.py",
+      "内置路径": "modules/qt-qml-review/references/lint-scripts/qt_qml_lint.py",
+      "字节数": 71517,
+      "SHA256": "7cee057ba5ef75791dabc59c4c5090e64dd2da3522f3abd810dff5983f8676e8"
+    },
+    {
+      "模块": "qt-qml-review",
+      "上游路径": "skills/qt-qml-review/references/qt-qml-review-checklist.md",
+      "内置路径": "modules/qt-qml-review/references/qt-qml-review-checklist.md",
+      "字节数": 13160,
+      "SHA256": "05525c4174b41a03e2da75b54349bd63bbcc71a45dd93ce1d88f7233eaa8af63"
+    },
+    {
+      "模块": "qt-qml-review",
+      "上游路径": "skills/qt-qml-review/SKILL.md",
+      "内置路径": "modules/qt-qml-review/原始说明.txt",
+      "字节数": 10425,
+      "SHA256": "e4df8b35717ff8d8e5e606a2e1284c1c5a41831f8b2286253946b2b691be2d9d"
+    },
+    {
+      "模块": "qt-qml-test",
+      "上游路径": "skills/qt-qml-test/LICENSE.txt",
+      "内置路径": "modules/qt-qml-test/LICENSE.txt",
+      "字节数": 1541,
+      "SHA256": "f1b7e919ce6f3a42144ca6c677c2b190801f83fb60ef26eed43d6173ba372f50"
+    },
+    {
+      "模块": "qt-qml-test",
+      "上游路径": "skills/qt-qml-test/platforms/copilot.prompt.md",
+      "内置路径": "modules/qt-qml-test/platforms/copilot.prompt.md",
+      "字节数": 21929,
+      "SHA256": "64be1cedceeaf3ab16908fe95f11c1b0a4369adf042379a79cdaf5d21505b52b"
+    },
+    {
+      "模块": "qt-qml-test",
+      "上游路径": "skills/qt-qml-test/references/qt-quick-test-controls.md",
+      "内置路径": "modules/qt-qml-test/references/qt-quick-test-controls.md",
+      "字节数": 14281,
+      "SHA256": "7984e93b6c066599e45ad4f94d1be9197364e74ceafa5cbf02616fccace19c5a"
+    },
+    {
+      "模块": "qt-qml-test",
+      "上游路径": "skills/qt-qml-test/references/qt-quick-test-pitfalls.md",
+      "内置路径": "modules/qt-qml-test/references/qt-quick-test-pitfalls.md",
+      "字节数": 9622,
+      "SHA256": "126cfe34fa6d4b267808d9addea6f83a80aae9d9ecb67ac5379ac1f8a9efd058"
+    },
+    {
+      "模块": "qt-qml-test",
+      "上游路径": "skills/qt-qml-test/references/qt-quick-test-pre-send-scan.md",
+      "内置路径": "modules/qt-qml-test/references/qt-quick-test-pre-send-scan.md",
+      "字节数": 1009,
+      "SHA256": "e6346e6ae6b0f4e9541f7b21c8a575035b8460922defa6577885494abf34a801"
+    },
+    {
+      "模块": "qt-qml-test",
+      "上游路径": "skills/qt-qml-test/references/qt-quick-test-project-context.md",
+      "内置路径": "modules/qt-qml-test/references/qt-quick-test-project-context.md",
+      "字节数": 1378,
+      "SHA256": "6b5202679816a6d00f58aa9a00f9835f2959b161a7d10b951a63bf68dd8122cc"
+    },
+    {
+      "模块": "qt-qml-test",
+      "上游路径": "skills/qt-qml-test/references/qt-quick-test-properties.md",
+      "内置路径": "modules/qt-qml-test/references/qt-quick-test-properties.md",
+      "字节数": 6539,
+      "SHA256": "69f46c48ca58eaf3a77176b91cee545c700cceb8889dbe8c83287b1735f3223e"
+    },
+    {
+      "模块": "qt-qml-test",
+      "上游路径": "skills/qt-qml-test/references/qt-quick-test-rules.md",
+      "内置路径": "modules/qt-qml-test/references/qt-quick-test-rules.md",
+      "字节数": 14768,
+      "SHA256": "9a8c0ef85ed82d8cf97389920cd7079f4e4beab7270041807f5570224e392882"
+    },
+    {
+      "模块": "qt-qml-test",
+      "上游路径": "skills/qt-qml-test/references/qt-quick-test-source-import.md",
+      "内置路径": "modules/qt-qml-test/references/qt-quick-test-source-import.md",
+      "字节数": 2796,
+      "SHA256": "a6e166624fead29330cf2ed902121d5e86592e554fb77f2be25de1ee7bb11986"
+    },
+    {
+      "模块": "qt-qml-test",
+      "上游路径": "skills/qt-qml-test/references/qt-quick-test-template.md",
+      "内置路径": "modules/qt-qml-test/references/qt-quick-test-template.md",
+      "字节数": 15169,
+      "SHA256": "5269bc7e6cab64ba293ad4a61bc17acc536c5df0d252fa8e1292e9324f957e9d"
+    },
+    {
+      "模块": "qt-qml-test",
+      "上游路径": "skills/qt-qml-test/SKILL.md",
+      "内置路径": "modules/qt-qml-test/原始说明.txt",
+      "字节数": 17130,
+      "SHA256": "56413d6d92d3b6c04641fff489355b227ee5fc861c81405b7fe355ab2e744018"
+    },
+    {
+      "模块": "qt-qml-test-run",
+      "上游路径": "skills/qt-qml-test-run/LICENSE.txt",
+      "内置路径": "modules/qt-qml-test-run/LICENSE.txt",
+      "字节数": 1541,
+      "SHA256": "f1b7e919ce6f3a42144ca6c677c2b190801f83fb60ef26eed43d6173ba372f50"
+    },
+    {
+      "模块": "qt-qml-test-run",
+      "上游路径": "skills/qt-qml-test-run/references/qt-quick-test-cmake.md",
+      "内置路径": "modules/qt-qml-test-run/references/qt-quick-test-cmake.md",
+      "字节数": 18245,
+      "SHA256": "5389bb75fee46303bf667b25bba3919955d2e66a27b8a14aa855ac1f084f90e2"
+    },
+    {
+      "模块": "qt-qml-test-run",
+      "上游路径": "skills/qt-qml-test-run/references/qt-quick-test-report-format.md",
+      "内置路径": "modules/qt-qml-test-run/references/qt-quick-test-report-format.md",
+      "字节数": 7683,
+      "SHA256": "5bc4ff9bd0571fd118d025d1338c737be4659e7b1c63972905ddeaa426b4ad6f"
+    },
+    {
+      "模块": "qt-qml-test-run",
+      "上游路径": "skills/qt-qml-test-run/references/scripts/parse-qmltestrunner-output.py",
+      "内置路径": "modules/qt-qml-test-run/references/scripts/parse-qmltestrunner-output.py",
+      "字节数": 6799,
+      "SHA256": "cc10c56bb5be54cf6fc78229c5650011ba105680cb6d195912435eb9478a3e58"
+    },
+    {
+      "模块": "qt-qml-test-run",
+      "上游路径": "skills/qt-qml-test-run/SKILL.md",
+      "内置路径": "modules/qt-qml-test-run/原始说明.txt",
+      "字节数": 18055,
+      "SHA256": "cf035a80ff328dde91c70c1ef82a2de275d1ec302b67b60c93c2264396b6d48e"
+    },
+    {
+      "模块": "qt-ui-design",
+      "上游路径": "skills/qt-ui-design/LICENSE.txt",
+      "内置路径": "modules/qt-ui-design/LICENSE.txt",
+      "字节数": 1541,
+      "SHA256": "f1b7e919ce6f3a42144ca6c677c2b190801f83fb60ef26eed43d6173ba372f50"
+    },
+    {
+      "模块": "qt-ui-design",
+      "上游路径": "skills/qt-ui-design/SKILL.md",
+      "内置路径": "modules/qt-ui-design/原始说明.txt",
+      "字节数": 25946,
+      "SHA256": "50fae8d9b6ec5f44d7ab7c3e3f7b5474bae0a68c0e4c89918569c9659e2db02e"
+    }
+  ],
+  "根许可证SHA256": "c5ab52eed9fff69c783c9b4b7e5eb6606fb43c67951e2ffd24e6cb502ceaeb4a"
+}
