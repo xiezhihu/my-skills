@@ -6,9 +6,9 @@
   "enabled": true,
   "tags": [],
   "source": {
-    "type": "git",
-    "ref": "https://github.com/fengfengzhidao/codex-image2-skill/tree/main/codex-image2",
-    "subpath": "codex-image2",
-    "branch": "main"
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
   }
 }
