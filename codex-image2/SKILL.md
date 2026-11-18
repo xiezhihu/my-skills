@@ -1,121 +1,520 @@
 ---
 name: codex-image2
-description: Configure a custom OpenAI-compatible image service with a local setup page, or generate and edit images through that service with support for the gpt-image model family and automatic model selection. Use for codex-image2 setup, API configuration, text-to-image, image edits, and batch image generation.
+description: 通过可配置的 OpenAI 兼容接口生成或编辑图片，提供结构化提示词指导、分类示例和批量任务。用于 codex-image2 服务配置、文字生图、参考图改图和批量生图；支持 gpt-image 模型家族与自动模型选择。
 ---
 
-# Codex Image2
+# Codex 图片生成
 
-Generate images with the bundled native CLI. Prefer this skill's executable over the built-in `image_gen` tool whenever this skill is active. No Python, Node.js, Go, or package installation is required.
+使用本技能附带的原生 CLI，通过用户配置的接口生图或改图，无需安装 Python、Node.js、Go 或额外依赖。
 
-## Select the executable
+提示词编写原则、完整结构、分类示例和批量格式均直接内嵌在本文件中，不需要加载其他技能或提示词参考文件。
 
-Choose once from the current operating system and CPU architecture:
+本技能启用时，优先使用附带的可执行程序。提示词方法已经整合为本技能自身的规则，不调用原 `imagegen` 技能，也不继承其内置 `image_gen` 工具、Python 脚本、密钥变量或接口配置；除非用户明确要求，不切换调用方式。
 
-- Windows x64: `bin/codex-image2-windows-amd64.exe`
-- Windows ARM64: `bin/codex-image2-windows-arm64.exe`
-- macOS Intel: `bin/codex-image2-darwin-amd64`
-- macOS Apple Silicon: `bin/codex-image2-darwin-arm64`
+## 选择程序
 
-On macOS, run `chmod +x <executable>` if execute permission was not preserved. Do not compile from source during normal use.
+按当前操作系统和处理器架构选择一次：
 
-## Workflow
+- Windows x64：`bin/codex-image2-windows-amd64.exe`
+- Windows ARM64：`bin/codex-image2-windows-arm64.exe`
+- macOS Intel：`bin/codex-image2-darwin-amd64`
+- macOS Apple Silicon：`bin/codex-image2-darwin-arm64`
 
-For setup requests, use the configuration workflow below. Before the first image call in a session, run `status`; if unconfigured, open `configure` and let the user finish in their browser before generating.
+macOS 未保留执行权限时，运行 `chmod +x <可执行程序>`。正常使用时不要从源码编译。
 
-1. Decide whether the request is a new image, an edit, or multiple distinct assets/variants.
-2. Collect the prompt, intended use, exact text, visual constraints, and avoid items.
-3. Shape the prompt only as much as needed. Preserve detailed prompts; tastefully clarify generic prompts without inventing brands, people, slogans, or unrelated objects.
-4. Run the selected executable with `generate` for one prompt, `edit` for changes to existing images, or `generate-batch` for JSONL jobs.
-5. Inspect each output for subject, composition, text accuracy, constraints, and visible artifacts.
-6. If revision is needed, change one targeted aspect per iteration and re-check.
-7. Report absolute output paths, the final prompt or prompt set, size, quality, and model.
+## 工作流程
 
-## Prompt structure
+仅讨论或整理提示词时，不发起生图请求或收费测试。实际生图前，先运行一次 `status`；未配置时按下文打开配置页，等用户完成配置。
 
-Use only relevant lines:
+1. 判断是新图、参考图生成、原图编辑，还是多个独立任务；明确用途、画面文字、必须保留和必须避免的内容。
+2. 按下文的提示词编写原则组织内容。用户描述明确时保留其细节；描述笼统时，只补充有助于成图的构图、材质和光线等信息。
+3. 需要分类写法时，直接使用本文件中的分类提示词示例，选取相关组织方法，不照搬示例的品牌、文字、配色或情节。
+4. 无输入图时用 `generate`；需要将参考图、编辑目标或合成素材实际提交给接口时，用 `edit` 并传入对应的 `--image`。仅在提示词中提到图片，不能代替上传图片。
+5. 单个提示词的多张变体使用 `--n`；多个不同提示词使用独立调用或 `generate-batch`。批量命令只支持文字生图，参考图和改图任务分别调用 `edit`。
+6. 检查输出的主体、构图、文字、保留项和明显瑕疵。需要修改时，每轮只调整相关问题，再次检查，避免无目的地反复调用。
+7. 交付实际生成的图片及其绝对路径，说明最终提示词、尺寸、质量和 CLI 返回的实际模型。没有生成或验证的内容，不声称已完成。
+
+## 提示词结构
+
+通常按“场景背景、画面主体、关键细节、约束、用途”组织。按需使用以下字段，简单需求可以直接写成自然语言，不必为了凑齐模板添加内容：
 
 ```text
-Asset type: <where the image will be used>
-Primary request: <the user's request>
-Scene/backdrop: <environment>
-Subject: <main subject>
-Style/medium: <photo, illustration, 3D, etc.>
-Composition/framing: <camera angle, crop, placement, negative space>
-Lighting/mood: <lighting and mood>
-Color palette: <palette notes>
-Text (verbatim): "<exact text>"
-Constraints: <must keep or include>
-Avoid: <must not include>
+用途分类：<写实摄影、产品图、海报、界面样稿、角色改图等>
+素材用途：<头像、商品图、网站配图、演示文稿等>
+主要需求：<用户真正想生成或修改的内容>
+输入图片：<图片编号及其角色：编辑目标、风格参考、合成素材等>
+场景背景：<环境>
+画面主体：<主体及其状态>
+风格媒介：<摄影、插画、三维渲染等>
+构图视角：<景别、视角、布局及必要留白>
+光线氛围：<光照与情绪>
+色彩方向：<用户要求的配色；无要求可省略>
+材质细节：<与画面相关的真实纹理>
+画面文字："<需要逐字呈现的文字>"
+必须保留：<必要元素或编辑时不应改变的内容>
+避免内容：<不应出现的元素或效果>
 ```
 
-Do not add detail merely to fill the schema. For text in images, quote it verbatim and request exact rendering.
+这些字段只是提示词文本，不是 CLI 参数。CLI 不会自动润色或追加提示词；由助手整理完成后，通过 `--prompt` 或 `--prompt-file` 提交，二者只能选择一个。长提示词使用 UTF-8 编码的文本文件。
 
-## Generate one image
+## 提示词编写原则
+
+### 明确需求
+
+- 先判断任务是生成新图、参考图片生成、修改原图、多图合成，还是多个独立素材。
+- 明确用途、主体、用户要求的风格、必须逐字呈现的文字，以及必须保留或避免的内容。只在缺失信息确实妨碍完成时提问。
+- 用户已有详细描述时，整理结构即可，不重新设计其创意，不擅自替换人物、品牌、场景、文字或配色。
+- 用户描述笼统时，可以补充必要的景别、光线、材质和画面清晰度，但这些补充应服务于原需求。
+- 用户要求原样提交提示词时，保持原文，不执行润色。
+
+### 补充边界
+
+可以在相关时补充：
+
+- 主体占比、景别、视角、画面比例及必要的文字留白。
+- 与实际用途匹配的细节，例如商品轮廓清晰、纹理可辨或人物完整入镜。
+- 有助于表现主体的合理环境、光照和材质描述。
+
+不要无依据地添加：
+
+- 新人物、额外道具、品牌、宣传语、剧情或没有要求的装饰元素。
+- 固定配色、固定左右位置、夸张滤镜，或与用户目标无关的镜头术语。
+- 用户未提供的真实数据、来源署名或引述。信息不全时保留待补内容或提问，不编造事实。
+
+示例中的细节只属于示例，不是每次生图都应附加的默认要求。
+
+### 构图与质感
+
+- 用具体可见的描述代替空泛的质量词，例如“杯口、把手和底部完整可见”，而非反复堆叠“顶级、完美、超清”。
+- 说明景别和视角，例如近景、全身、俯视、平视；只有用户需求或版式需要时才指定左右位置。
+- 图片需要搭配标题或界面时，说明留白用途和大致区域；不需要文字时，不预留无意义的大块空白。
+- 写实摄影明确写出真实摄影取向及关键纹理，如毛发、皮肤、布料、玻璃或金属。光线和纹理保持自然，不默认磨皮或过度修饰。
+- 产品图说明物体形状、材质、轮廓及标签是否需要清晰；不得让风格词覆盖产品真实外观。
+- 插画或三维风格说明画法、材质感和空间关系，不因风格变化擅自增添情节。
+
+### 画面文字
+
+- 将需要呈现的文字放进引号，明确要求逐字一致，不额外生成标题、签名或重复标语。
+- 需要排版时，说明字体类别、字号层级、位置和对比度；不要让大量小字挤占主体。
+- 保留用户的原始语言、大小写、数字与标点；没有要求时，不自行翻译或改写品牌与文案。
+- 生僻字、字母组合或容易误读的短语，可以单独强调字符顺序，但不默认在画面中显示拆分后的形式。
+- 复杂文字可以考虑 `--quality medium` 或 `--quality high`，但质量参数不保证文字零错误，生成后仍需逐字检查。
+
+### 输入图片
+
+- 区分编辑目标、风格参考、身份参考、布局参考和合成素材，不把每张参考图都当成必须完整保留的原图。
+- 在提示词中按 `--image` 的传入顺序写清“图片一、图片二”等编号及其用途。
+- 仅参考风格时，说明需要迁移的配色、笔触、光线或材质，不要求复制无关主体。
+- 需要保持人物或产品一致时，说明关键身份、形状、比例和外观特征；不要仅写“风格相同”来代替一致性要求。
+- 多图合成说明从哪张图取什么、放进哪张图，以及需要匹配的视角、尺寸、光线、阴影和遮挡关系。
+- 当前 CLI 将参考图、原图编辑和多图合成都通过 `edit` 提交；不要构造不存在的 `generate --image` 用法。
+
+### 编辑保留项
+
+编辑提示词同时说明修改目标和不变部分，例如：
+
+```text
+修改目标：只把背景换成浅灰色摄影棚背景。
+必须保留：产品本体、标签文字、比例、边缘、拍摄视角和原有反光。
+融合要求：新背景与产品的光线方向和接触阴影自然匹配。
+避免内容：不增加新物体，不修改标签，不裁掉产品边缘。
+```
+
+- 保留项应与实际修改目标一致。用户要求改变姿势或布局时，不同时要求姿势或布局完全不变。
+- 文字替换锁定非目标文字、版式和图像元素；局部换物锁定周围环境；天气变化锁定建筑、人物和几何关系。
+- 人物一致性明确锁定面部特征、体型、发型及需要保留的服饰，不把用户要求更换的服饰也锁死。
+- 使用蒙版只能辅助限定区域，不代表能保证像素级不变；仍需检查边缘及周围区域。
+
+### 多轮迭代
+
+- 先得到清晰的基础结果，再针对一个具体问题修改；不要每轮重写所有要求。
+- 每轮重复关键保留项，并使用需要继续修改的最新图片作为实际输入。
+- 以用户目标和可见结果为准，不为了“更好看”改变已经认可的主体、品牌或构图。
+- 不自动进行无目的的大量收费尝试；遇到持续失败时，按下文的失败处理规则说明限制。
+
+### 分类组织重点
+
+| 类别 | 组织重点 |
+| --- | --- |
+| 写实摄影 | 真实场景、自然光线、具体纹理、主体状态与合理景别 |
+| 产品展示 | 产品形状和材质、完整轮廓、标签清晰度与背景关系 |
+| 界面样稿与线框图 | 明确保真度、设备画幅、信息层级和真实页面结构 |
+| 信息图与科学教育图 | 阅读顺序、标签原文、箭头关系、可靠的知识或数据 |
+| 标志与品牌图 | 原创轮廓、清晰结构、准确名称及缩小时的辨识度 |
+| 广告与宣传图 | 用户给定的受众、产品、文案、视觉重点和排版空间 |
+| 演示与工作图 | 具体产物、标题和数据来源，不添加虚构数字 |
+| 故事插画 | 分镜、具体动作、角色关系及跨图一致性 |
+| 概念与游戏素材 | 视觉风格、材质、视角、环境尺度和素材用途 |
+| 历史场景 | 用户指定的时间地点、参考史料和应排除的时代错置 |
+| 原图编辑 | 只改什么、保留什么、如何匹配边缘和光线 |
+
+### 透明背景与交付检查
+
+- “透明背景”是输出需求，不是可靠的通道验证结果。不要把棋盘格图案当作真实透明。
+- 用户需要真实透明通道时，生成后检查文件是否包含有效透明通道；未满足则如实说明，并与用户确认下一步，不擅自换工具或模型。
+- 尺寸、质量、数量、输入图和输出路径通过现有 CLI 参数传入，不只写在提示词中；保留默认的自动模型选择。
+- 检查主体、数量、动作、构图、风格，以及所有画面文字是否符合用户要求，是否出现多余文字或错误数字。
+- 检查编辑保留项、参考图身份、产品标签与比例是否被误改，以及多余肢体、断裂边缘、透视或光影不匹配等明显问题。
+- 用户要求透明通道、特定尺寸或格式时，实际检查文件后再报告；区分已生成、仅试运行和未验证的结果。
+
+## 生成单张图片
 
 ```powershell
-& "<skill-dir>\bin\codex-image2-windows-amd64.exe" generate `
-  --prompt "A small blue nebula in a glass bottle, studio product photo" `
+& "<技能目录>\bin\codex-image2-windows-amd64.exe" generate `
+  --prompt "玻璃瓶中的一小片蓝色星云，简洁的棚拍产品摄影，玻璃纹理清晰，柔和光线，无文字、无水印。" `
   --size 1024x1024 `
   --quality auto `
   --out "output/imagegen/nebula.png"
 ```
 
-Use `--prompt-file` for long prompts. Use `--n` only for variants of the same prompt. Distinct assets belong in separate calls or a batch.
+不要将尺寸、质量、输入图片等实际参数仅写在提示词中。默认省略 `--model` 或使用 `--model auto`，保留自动模型选择。
 
-## Edit an image
+## 编辑或参考图片
 
-Inspect each input image before editing. State its role and repeat invariants in the prompt so unrelated details do not drift.
+先查看每张输入图片，明确其角色。区分“参考其风格生成新内容”和“修改原图并保留其余部分”；前者不要锁定不需要保留的主体，后者在每轮提示词中重复关键保留项。
 
 ```powershell
-& "<skill-dir>\bin\codex-image2-windows-amd64.exe" edit `
+& "<技能目录>\bin\codex-image2-windows-amd64.exe" edit `
   --image "input/product.png" `
-  --prompt "Replace only the background with a warm studio backdrop. Keep the product, label, proportions, and edges unchanged." `
+  --prompt "只将背景替换为柔和暖色的摄影棚背景。保持产品、标签文字、比例、边缘和拍摄视角不变，使新背景与原有光线自然匹配。" `
   --quality auto `
   --out "output/imagegen/product-edited.png"
 ```
 
-Repeat `--image` for multiple reference or compositing inputs. Use `--mask mask.png` for a localized edit when a compatible PNG mask is available. Preserve originals and always write edits to a new output path.
+多图参考或合成时，重复传入 `--image`，并在提示词中按传入顺序标明图片编号及用途。存在兼容的 PNG 蒙版时，可用 `--mask mask.png` 指定局部编辑；蒙版编辑仍需检查是否误改周围内容。保留原图，默认写入新文件。
 
-## Generate a batch
+## 批量生成
 
-Read [references/batch-format.md](references/batch-format.md) before preparing a batch. Then run:
+批量输入使用 JSONL 格式，每行一个 JSON 对象，每个任务自行包含完整的非空 `prompt`，不依赖上一行任务的上下文。空行会被忽略：
+
+```jsonl
+{"prompt":"白色陶瓷杯的商品展示图，简洁背景，无文字。","out":"mug.png"}
+{"prompt":"晴空中的红色纸风筝，无文字。","size":"1536x1024","quality":"low","n":2,"out":"kite.png"}
+```
+
+准备好输入文件后运行：
 
 ```powershell
-& "<skill-dir>\bin\codex-image2-windows-amd64.exe" generate-batch `
+& "<技能目录>\bin\codex-image2-windows-amd64.exe" generate-batch `
   --input "tmp/imagegen/jobs.jsonl" `
   --out-dir "output/imagegen" `
   --concurrency 2
 ```
 
-## Configure the image service
+每行只使用现有 CLI 支持的 `prompt`、`size`、`quality`、`n`、`out`、`model` 字段；提示词的主体、风格和约束等写在 `prompt` 内，不新增未经支持的请求字段。
 
-- Run `<executable> status` to inspect `configured`, `source`, `api_url`, and `message`. It never returns a key.
-- `configured` only confirms that local credentials are readable; it does not prove remote authentication or image permissions. Do not claim API access was verified from `status` alone.
-- For first use, missing/inaccessible credentials, or a request to change settings, run `<executable> configure`. This launches a detached local configuration page and returns immediately. Do not background it with shell scripts or wait for its server to exit.
-- Tell the user to fill in the API address and key in the browser and click **保存配置**. If the browser did not open, provide the returned local `url` as a clickable link. This temporary link is valid for 15 minutes on the user's machine.
-- Saving first queries the submitted key's model list. Any listed `gpt-image` family model allows a normal save. The family includes `gpt-image` and IDs starting with `gpt-image-`, such as `gpt-image-1`, `gpt-image-1-mini`, and `gpt-image-2.6`. If no family model is listed, or the list is unsupported/incompatible, the page warns and requires the user's explicit **仍然保存** action to save an unverified service. Authentication/network/rate-limit/server errors require correction before saving. Never click the override for the user.
-- Never ask for the key in chat, put it into a command, or fill it through automation. The user enters it directly in the local page; only that program handles it.
-- After the user says they saved, run `status` again and continue the original image request if configured. Do not repeatedly reopen the page or poll while waiting for user input.
-- Saved settings take effect on the next CLI invocation, with no Codex restart. Existing local config takes priority over legacy environment variables as a complete address/key pair. A damaged local config must be repaired through the setup page rather than silently falling back to another service.
-- **检测连接** only probes the model-list endpoint and shows the current key's model IDs, highlighting image models and the automatic selection. Missing or hidden models trigger a warning rather than proof that the image API is unavailable. Editing the address/key clears stale results. The optional **测试生图（可能计费）** requires user confirmation and makes one image request without retries. Do not run paid tests automatically as part of setup.
-- Windows encrypts the key with current-user DPAPI; macOS stores it in the login Keychain. macOS may ask the user to unlock or allow access to the Keychain.
-- The user can click **显示** to reveal a saved key in their local page. Hiding clears a revealed saved key, and the page automatically hides it after 30 seconds or when the page becomes hidden. Never click reveal, inspect a real revealed key, or call the reveal endpoint through agent tools.
+每个任务使用不同的输出文件名。相对 `out` 路径基于 `--out-dir` 解析；`n` 大于一时，程序会在扩展名前添加 `-1`、`-2` 等编号。批量命令打印 JSON 汇总，任一任务失败时返回非零退出码。
 
-## Configuration and safety
+## 配置图片服务
 
-- Let the CLI read credentials. Never inspect credential files or credential-store contents yourself, or copy keys into project files, prompts, logs, or responses. The configuration page may save keys only through the CLI's platform credential backend.
-- Legacy `CODEX_API_URL` and `CODEX_API_KEY` remain supported when no local configuration exists; their URL defaults to `https://apinebula.ai/v1`. Recommend the local setup page to new users. Existing saved URLs are preserved.
-- Default to `--model auto` (or omit the flag), size `1024x1024`, and quality `auto`. The CLI checks the configured service's model list and prefers `gpt-image-2.5`, then `gpt-image-2`, then the first other `gpt-image` family model in lexicographic ID order. A service listing only `gpt-image-2.6` uses that model. When discovery fails or lists no family model, the CLI calls `gpt-image-2` directly. Each batch shares discovery per service/credential pair.
-- Respect an explicitly requested model using `--model <name>` or a batch row's `model`; do not add `--model gpt-image-2` by habit, as that overrides automatic preference. Report the actual model from the CLI result.
-- Dry runs never query model availability; `model_selection: auto` indicates automatic discovery was skipped, and their example payload uses `gpt-image-2`.
-- Use `--dry-run` to validate a request without network access or requiring a key.
-- Save project-bound assets inside the current project. The CLI default is `output/imagegen/`.
-- Do not overwrite files unless the user explicitly authorizes it and `--force` is passed.
-- Native transparent output is not guaranteed. Do not promise it or silently switch tools.
+- 运行 `<可执行程序> status` 查看 `configured`、`source`、`api_url` 和 `message`；它不会返回密钥。
+- `configured` 仅说明本地凭据可读取，不证明远端认证或生图权限正常。不要仅凭状态查询声称接口验证成功。
+- 首次使用、凭据缺失或无法访问、用户要求改配置时，运行 `<可执行程序> configure`。程序自行分离启动本地配置页并立即返回，不要再用脚本将其后台化，也不要等待配置服务器退出。
+- 让用户在浏览器中自行填写 API 地址和密钥，点击 **保存配置**。浏览器未打开时，提供返回的本地 `url` 链接；该临时链接在用户机器上有效 15 分钟。
+- 保存前会查询模型列表。列出任意 `gpt-image` 家族模型时正常保存；家族包括名称为 `gpt-image` 或以 `gpt-image-` 开头的模型，例如 `gpt-image-1`、`gpt-image-1-mini`、`gpt-image-2.6`。未列出家族模型，或列表接口不支持、不兼容时，显示警告且保持原配置不变。只有用户自行点击 **仍然保存** 才保存未经验证的服务，不得替用户点击。认证、网络、限流和服务器错误即使确认也阻止保存。
+- 不让用户在聊天中提供密钥，不把密钥写进命令，不通过自动化代填。只有用户直接输入的本地配置页及程序的凭据后端处理密钥。
+- 用户确认保存后，再运行 `status`，已配置则继续原图片任务。等待用户时，不反复打开配置页或轮询。
+- 保存的设置在下一次 CLI 调用时生效，无需重启 Codex。本地配置优先于旧环境变量，地址和密钥作为完整配对使用；本地配置损坏时，通过配置页修复，不静默回退到其他服务。
+- **检测连接** 只查询模型列表，显示当前密钥可见的模型，突出显示图片模型及自动选择结果。模型隐藏或缺失只产生警告，不证明生图接口不可用；编辑地址或密钥会清除旧检测结果。
+- **测试生图（可能计费）** 需用户确认，只发送一次图片请求且不重试。配置流程不得自动执行收费测试。
+- Windows 使用当前用户 DPAPI 加密密钥；macOS 将密钥保存在登录钥匙串中，可能要求用户解锁或授权。
+- 配置页的 **显示** 仅供用户自行查看密钥。隐藏操作会清除已显示内容，30 秒后或页面隐藏时也会自动隐藏。代理不得点击显示、检查明文密钥或调用显示密钥的接口。
 
-## Failure handling
+## 调用边界与安全
 
-- The CLI retries network timeouts and HTTP 429/500/502/503/504/524 failures with bounded backoff.
-- On repeated timeout, suggest `--quality low`, a square size, fewer concurrent jobs, or a later retry.
-- Do not retry authentication, validation, or other ordinary 4xx errors.
-- Never expose an Authorization header or full key when reporting errors.
+- 由 CLI 读取凭据。不得自行检查凭据文件或系统凭据库内容，也不得将密钥复制到项目、提示词、日志或回复中。配置页只通过程序的平台凭据后端保存密钥。
+- 不存在本地配置时，仍支持 `CODEX_API_URL` 和 `CODEX_API_KEY`；旧环境变量方式的默认地址为 `https://apinebula.ai/v1`。新用户优先使用本地配置页，已有保存地址保持不变。
+- 默认省略模型参数或使用 `--model auto`，尺寸为 `1024x1024`，质量为 `auto`。CLI 查询已配置服务的模型列表，依次优先选择 `gpt-image-2.5`、`gpt-image-2`，再将其他 `gpt-image` 家族模型按名称字典序排序并选择首个；例如仅列出 `gpt-image-2.6` 时使用该模型。模型发现失败或没有家族模型时，直接尝试 `gpt-image-2`。一个批次共享同一服务和凭据的模型发现结果。
+- 尊重用户明确指定的模型，通过 `--model <模型名称>` 或批量行的 `model` 传入。不要习惯性写死 `gpt-image-2`，以免覆盖自动选择；报告 CLI 返回的实际模型。
+- `--dry-run` 不联网、不查询模型可用性、不要求真实密钥，也不写出图片；仍会检查本地输入、配置格式和输出冲突。其 `model_selection: auto` 表示跳过自动发现，示例请求中的 `gpt-image-2` 不代表已验证该模型可用。
+- `--quality` 支持 `low`、`medium`、`high`、`auto`。快速草稿可选 `low`，复杂文字或精细图像可考虑 `medium` 或 `high`；最终仍尊重用户要求和服务支持情况。
+- 提示词中描述“透明背景”不保证真实透明通道。当前 CLI 没有 `--background`、`--input-fidelity`、`--output-format` 参数；不得从其他技能照搬这些参数或默默切换模型、工具。
+- 项目使用的图片保存到项目目录，CLI 默认输出目录为 `output/imagegen/`。没有用户明确授权并传入 `--force` 时，不覆盖已有文件。
+
+## 失败处理
+
+- CLI 对网络超时及 HTTP `429/500/502/503/504/524` 错误执行有上限的退避重试。
+- 持续超时时，可建议降低为 `--quality low`、使用方图、减少并发或稍后重试，不无休止重复请求。
+- 不重试认证、参数校验或其他普通 `4xx` 错误。
+- 报错时，不展示 `Authorization` 请求头或完整密钥；不把失败的请求说成已生成成功。
+
+## 分类提示词示例
+
+以下示例直接属于本技能。示例中的主题、名字、文字和细节只演示写法，不是对用户需求的默认补充。先遵循上文的编写原则，再按任务选择相关结构；CLI 不会自行套用这些示例。
+
+### 写实摄影
+
+```text
+素材用途：小猫照片
+主要需求：一只幼年虎斑小猫好奇地望向镜头
+场景背景：简洁自然的室内环境，背景轻微虚化
+风格媒介：真实摄影，色彩自然
+构图视角：与小猫眼睛平齐，主体完整入镜，周围保留适量空间
+光线氛围：柔和自然窗光，安静温馨
+材质细节：毛发、胡须和鼻尖纹理清晰，眼睛反光自然
+避免内容：多余动物、人物、异常肢体、文字、水印
+```
+
+### 产品展示
+
+```text
+素材用途：商品展示图
+主要需求：一只白色陶瓷杯的产品照片
+场景背景：干净的浅灰色摄影棚背景
+构图视角：四分之三视角，杯口、把手和底部完整可见
+光线氛围：柔和棚拍光线，阴影轻微
+材质细节：真实陶瓷釉面，轮廓清晰
+必须保留：产品形状自然，主体清楚可辨
+避免内容：无关道具、额外文字、水印
+```
+
+使用用户商品参考图时，通过 `edit --image` 上传，并明确保持实际外观，不用文字描述代替产品输入图。
+
+### 界面样稿
+
+```text
+素材用途：移动端任务列表界面样稿
+主要需求：呈现可用于产品讨论的高保真任务管理界面
+风格媒介：清晰克制的产品界面视觉
+构图视角：竖向手机画幅，顶部导航、任务分组、列表和底部导航完整可见
+画面文字："今天"、"进行中"、"已完成"、"添加任务"
+必须保留：信息层级清楚，正文易读，按钮与图标尺寸协调
+避免内容：营销海报式构图、无关插画、重复导航、过小文字
+```
+
+界面样稿是图片，不等同于可运行的软件；若用户要实际界面代码，按其实现需求处理，不用生成图片冒充成品应用。
+
+### 信息图
+
+```text
+素材用途：咖啡机流程示意图
+主要需求：清晰展示从咖啡豆到杯中咖啡的工作顺序
+构图视角：横向阅读顺序，以箭头连接主要部件
+风格媒介：简洁的信息图，标签与图形一一对应
+画面文字："豆仓"、"研磨"、"冲煮"、"咖啡杯"
+必须保留：标签逐字准确，箭头方向一致，图形不遮挡文字
+避免内容：多余标签、伪造参数、拥挤小字
+```
+
+### 科学教育图
+
+```text
+素材用途：基础植物结构教学图
+主要需求：用清晰插图标出一株植物的主要组成部分
+风格媒介：适合课堂讲解的科学示意图
+构图视角：完整展示地上和地下部分，标注线不互相遮挡
+画面文字："根"、"茎"、"叶"、"花"
+必须保留：结构关系合理，标签对应准确，图示便于阅读
+避免内容：无关装饰、无法辨认的标签、未经确认的知识性结论
+```
+
+复杂科学机制应先确认内容，再组织图示；视觉清晰不等于知识正确。
+
+### 标志与品牌图
+
+```text
+素材用途：中文品牌标志概念图
+主要需求：为示例品牌“青禾”设计原创标志
+风格媒介：简洁平面图形，清晰的品牌字样
+构图视角：单个标志置于干净背景，保留适量边距
+画面文字："青禾"
+必须保留：文字逐字准确，轮廓易识别，小尺寸仍有辨识度
+避免内容：现有品牌标志、额外标语、无关场景、水印
+```
+
+图片中的平面风格不代表交付了可编辑矢量文件；用户要求矢量格式时，另行明确实际产物。
+
+### 广告与宣传图
+
+```text
+素材用途：轻便背包宣传图
+主要需求：突出一只轻便背包的整体轮廓与日常使用感
+场景背景：简洁的城市通勤场景
+构图视角：产品为主视觉，文案区清楚但不压住产品
+光线氛围：明亮自然，适合日常用品宣传
+画面文字："轻装出发"
+必须保留：文案只出现一次，产品清晰，视觉层级明确
+避免内容：额外品牌、虚构折扣、无依据的性能承诺、水印
+```
+
+真实产品宣传优先使用用户提供的产品图和文案，不将本例的产品、口号或场景套到其他任务。
+
+### 演示与工作图
+
+```text
+素材用途：一页工作计划演示图
+主要需求：清晰呈现本周目标、关键事项和风险
+构图视角：横向演示画幅，标题清楚，三个内容区阅读顺序明确
+风格媒介：克制的工作汇报视觉，文字和结构优先
+画面文字："本周计划"、"本周目标"、"关键事项"、"风险"
+必须保留：只使用用户提供的具体事项和数字，文字足够清晰
+避免内容：虚构数据、伪造来源、小字堆叠、无关装饰
+```
+
+示例没有提供各栏的实际内容。用户要求完整图表或汇报时，先取得数据，不在空白处自行编造。
+
+### 故事插画
+
+```text
+素材用途：四格故事插画
+主要需求：表现一只小猫从打盹到醒来的过程
+风格媒介：柔和的绘本插画
+构图视角：四个等大分格，动作依次为蜷睡、睁眼、伸懒腰、坐起
+必须保留：各格中是同一只小猫，毛色、体型和画法一致，动作清楚
+避免内容：额外角色、混乱分格、文字对白、水印
+```
+
+分格数量、动作和情节只属于这个示例；实际任务按用户的故事安排组织。
+
+### 概念与三维风格
+
+```text
+素材用途：游戏环境概念图
+主要需求：一座空间层次清楚的科幻机库
+场景背景：高挑结构、设备区与通道形成明确空间关系
+风格媒介：具有真实材质的三维概念视觉
+构图视角：广角建立镜头，环境尺度容易理解
+光线氛围：工业照明，重点区域清楚可辨
+必须保留：结构透视合理，材质区分清晰
+避免内容：无关标志、文字水印、遮挡主体的大面积雾气
+```
+
+### 历史场景
+
+```text
+素材用途：有明确时代要求的历史场景图
+主要需求：呈现用户指定时间、地点与事件中的场景
+场景背景：依据用户给定的史料和参考图片
+风格媒介：按用户要求选择历史插画或真实摄影取向
+必须保留：服饰、建筑、交通与文字样式符合所指定时代
+避免内容：现代设备、时代错置、编造的标志或具体人物身份
+```
+
+时间、地点和必要史料未明确且会影响准确性时先询问；不要把“历史感”滤镜当作考据。
+
+### 网站配图
+
+```text
+素材用途：网站中与用户主题相关的配图
+主要需求：明确展示用户指定的产品、地点或主题
+构图视角：匹配实际版面比例；需要叠加文案时，为指定区域保留空间
+风格媒介：与网站现有视觉一致的摄影或插画
+必须保留：主要内容可辨，裁切后仍不丢失关键主体
+避免内容：不相关的素材、未经要求的内嵌文字、影响内容辨认的装饰
+```
+
+若无需叠字，省略留白要求；不得仅因是网站图片就擅自加入营销文案。
+
+### 游戏素材
+
+```text
+素材用途：俯视角游戏中的盾牌道具图
+主要需求：生成轮廓清晰、便于小尺寸辨认的盾牌素材
+风格媒介：与用户游戏画风一致的手绘道具视觉
+构图视角：单一道具，视角固定，边缘留出适量空间
+必须保留：外轮廓明确，主要纹理不过分细碎
+避免内容：完整场景、额外道具、文字、水印
+```
+
+需要透明底、拼接纹理或固定网格尺寸时，将其作为明确输出需求并检查实际文件，不从示例推断服务必然支持。
+
+### 线框图
+
+```text
+素材用途：桌面端任务看板的低保真线框图
+主要需求：展示页面结构和主要交互区域
+风格媒介：灰度线框，清晰的矩形分区与文字标签
+构图视角：横向桌面画幅，导航、工具栏与看板列完整可见
+画面文字："待处理"、"进行中"、"已完成"
+必须保留：结构和层级易读，标签准确
+避免内容：真实照片、精细装饰、用高保真视觉掩盖结构问题
+```
+
+### 文字替换
+
+```text
+输入图片：图片一为需要修改的原图
+主要需求：只把图中标题替换为“春日上新”
+画面文字："春日上新"
+必须保留：原图版式、标题所在区域、其他文字、配图、颜色与装饰
+避免内容：新增文字、重复标题、其他区域重排
+```
+
+用户要保留字体、字号或换行方式时明确写入；新文本长度差异需要调整时，不同时要求不可能保持的逐像素排版。
+
+### 身份保持
+
+```text
+输入图片：图片一为人物身份参考，图片二为服饰参考
+主要需求：将图片一的人物换上图片二中的服饰
+必须保留：人物面部特征、体型、发型、姿势与背景
+融合要求：服饰比例、褶皱、遮挡和光照自然匹配人物
+避免内容：改变人物身份、增加无关饰品、修改背景
+```
+
+若用户同时要求换姿势，应移除“姿势不变”的约束。
+
+### 局部换物
+
+```text
+输入图片：图片一为房间原图
+主要需求：只把图中的白色椅子替换为木椅
+必须保留：房间结构、其他家具、拍摄视角、地面和光线方向
+融合要求：木椅尺寸、透视、接触阴影和遮挡关系自然
+避免内容：新增家具、改变房间布局、误改相邻区域
+```
+
+### 光线与天气
+
+```text
+输入图片：图片一为需要调整氛围的原图
+主要需求：将场景改为冬日傍晚，并加入轻微降雪
+必须保留：建筑、人物、道路、取景和几何关系
+修改范围：只改变光线、天气及相关环境氛围
+避免内容：移动主体、改变结构、用大雪遮住重要细节
+```
+
+### 风格迁移
+
+```text
+输入图片：图片一为风格参考
+主要需求：用图片一的画法表现一株盆栽
+风格媒介：保留参考图的笔触、配色关系和材质表现
+必须保留：新画面主体是盆栽，不复制参考图无关的主体和文字
+避免内容：增加人物、搬用参考图的标志、添加无关情节
+```
+
+### 多图合成
+
+```text
+输入图片：图片一为桌面场景，图片二为需要放入场景的台灯
+主要需求：把图片二的台灯自然放入图片一的桌面
+必须保留：图片一的环境与拍摄视角，图片二台灯的形状、颜色和细节
+融合要求：尺寸比例、透视、光线、接触阴影和遮挡关系与桌面一致
+避免内容：拉伸台灯、增加其他物体、重做整个背景
+```
+
+### 草图转换
+
+```text
+输入图片：图片一为用户提供的室内草图
+主要需求：将草图转为真实摄影取向的室内效果图
+必须保留：草图的布局、透视、主要家具位置和空间比例
+材质细节：根据用户指定的材料表现墙面、地面与家具
+避免内容：新增房间、挪动主要家具、无依据地改动结构
+```
+
+没有提供材质且材质选择重要时先确认；普通草稿可以只补充低风险的中性材质。
+
+### 连续角色
+
+```text
+输入图片：图片一为上一张已认可的角色图
+主要需求：让同一角色继续出现在用户指定的新场景中
+必须保留：角色面部特征、发型、体型、服饰和主要配色
+风格媒介：保持上一张的画法与材质表现
+修改范围：只改变用户要求的新动作、背景或情节
+避免内容：重新设计角色、增加未经要求的新角色、改变已确认的特征
+```
+
+每轮将要延续的图片通过 `--image` 实际提交，并根据用户的新动作移除相互冲突的保留项。
