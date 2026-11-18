@@ -8,6 +8,7 @@
     "cline": true,
     "codex": true,
     "continue": true,
+    "deepseek_harness": true,
     "github_copilot": true,
     "junie": true,
     "openclaw": true,
