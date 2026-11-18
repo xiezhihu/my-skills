@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "skill_id": "eb7118aa-64c0-408d-90d3-e7f5317cc4d2",
+  "path": "officecli-local",
+  "path_key": "officecli-local",
+  "enabled": true,
+  "tags": [
+    "办公",
+    "本地编辑"
+  ],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}
